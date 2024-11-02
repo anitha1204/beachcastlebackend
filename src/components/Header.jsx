@@ -166,7 +166,7 @@ const Header = () => {
     }
 
     try {
-        const response = await axios.post('http://localhost:8100/api/postdata', formData);
+        const response = await axios.post('https://beachcastle.onrender.com/api/postdata', formData);
         console.log('Form submitted successfully:', response.data);
         
         // Optionally reset the form
