@@ -521,7 +521,7 @@ const Header = () => {
 
           {/* Second Row with uniform sizes */}
           <div className="grid grid-cols-1  md:grid-cols-[300px_400px_400px_250px] gap-4  lg:ml-[100px] ml-3">
-            <a
+            {/* <a
               href="https://beachcastle.co.in/gallery/"
               target="_blank"
               rel="noopener noreferrer"
@@ -529,13 +529,16 @@ const Header = () => {
               <button className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24">
                 See all Images
               </button>
-            </a>
+            </a> */}
+             <button className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24">
+                {/* See all Images */}
+              </button>
             {imagesRow2.map((image) => (
               <div key={image.id} className="overflow-hidden group relative">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-[250px]  object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]" // Set uniform height for second row
+                  className="lg:w-full w-[300px] h-[250px]  object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]" // Set uniform height for second row
                 />
               </div>
             ))}

@@ -18,7 +18,7 @@ const PoliciesPage = () => {
         <img
           src={PoliciesPageimg}
           alt="Policies"
-          className="lg:w-full lg:h-auto w-[440px] h-48"
+          className="lg:w-full lg:h-auto w-full h-60"
         />
       </div>
     </div>
