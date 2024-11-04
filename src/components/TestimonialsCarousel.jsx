@@ -7,16 +7,12 @@ const TestimonialSlider = () => {
 
   const testimonials = [
     {
-      text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      text: "If you're searching for a spacious venue near the beach for weddings or functions, 'Beach Castle' is an ideal choice. This location typically offers, ample space for large gatherings, and a perfect ambiance for both traditional and contemporary ceremonies. It often includes facilities like catering, decorations, and accommodations, making it a convenient all-in-one solution for weddings or large events. For more details, I recommend checking out their website or contacting them directly to explore what specific amenities they offer.",
       author: "Viki"
     },
     {
-      text: "For more details, I recommend checking out their website or contacting them directly to explore what specific amenities they offer.",
-      author: "John Doe"
-    },
-    {
-      text: "Premises is incredible. It's maintained very well.",
-      author: "Jane Smith"
+      text: "Premises is incredible. It’s maintained very well.",
+      author: "Mohamed Irshath"
     }
   ];
 
@@ -57,7 +53,7 @@ const TestimonialSlider = () => {
               index === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
-            <p className="text-center text-gray-700 text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto">
+            <p className="text-center text-gray-700 text-md md:text-lg lg:text-lg mb-8 max-w-4xl mx-auto">
               {testimonial.text}
             </p>
             <p className="text-center text-gray-500 font-medium">

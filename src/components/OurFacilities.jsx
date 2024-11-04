@@ -12,7 +12,7 @@ const OurFacilities = () => {
                 <img
                     src={imag}
                     alt="Amenities"
-                    className="rounded-[20px] shadow-lg w-[300px] max-w-[460px] h-auto lg:mt-28"
+                    className="rounded-[20px] shadow-lg w-[300px] lg:w-[460px] h-auto lg:mt-28"
                 />
             </div>
 
