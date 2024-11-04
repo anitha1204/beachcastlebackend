@@ -909,12 +909,12 @@ export default MainImage;
 
 //         {/* Second Row with uniform sizes */}
 //         <div className="grid grid-cols-1 md:grid-cols-[300px_400px_400px_250px] gap-4 lg:ml-[100px] ml-3">
-//           <button
-//             className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24 hidden lg:block"
-//             onClick={handleShowMoreImages}
-//           >
-//             {showMoreImages ? 'Hide Images' : 'See all Images'}
-//           </button>
+          // <button
+          //   className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24 hidden lg:block"
+          //   onClick={handleShowMoreImages}
+          // >
+          //   {showMoreImages ? 'Hide Images' : 'See all Images'}
+          // </button>
 
 //           {/* Display images conditionally */}
 //           { imagesRow2.map((image) => (

@@ -501,7 +501,7 @@ const Header = () => {
 
       {/* Gallery section */}
       <section ref={galleryRef}>
-        <div className="w-full mt-16">
+        <div className=" mt-16">
           <div className="mb-8 max-w-6xl mx-auto px-4 lg:px-8 text-center lg:text-left">
             <h1 className="text-2xl lg:text-3xl font-semibold mb-4">Gallery</h1>
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
@@ -526,18 +526,14 @@ const Header = () => {
           </div>
 
           {/* Second Row with uniform sizes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto gap-4  ">
-            {/* Button only visible on lg screens */}
-           
-             
-
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:max-w-5xl max-w-7xl mx-auto p-4 lg:mr-40 ">
            {/* Display images */}
             {imagesRow2.map((image) => (
               <div key={image.id} className="overflow-hidden group relative">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="lg:w-[300px] w-[330px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+                  className="w-full h-[250px] lg:w-[300px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
                 />
               </div>
             ))}
