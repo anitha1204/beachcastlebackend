@@ -11,12 +11,13 @@ import Bannerimg2 from "../assets/Hall1.jpg";
 import PoliciesPage from './PoliciesPage';
 
 
-import imgpgallery from '../assets/Service area.jpg';
-import imgpgallery1 from '../assets/Pool.jpg';
+import imgpgallery from '../assets/Black2.jpg';
+import imgpgallery1 from '../assets/Courtyard.jpg';
 import imgpgallery2 from '../assets/Rectangle 64.png';
-import imgpgallery3 from '../assets/Entrance.jpg';
-import imgpgallery4 from '../assets/Black2.jpg';
-import imgpgallery5 from '../assets/Plum3.jpg';
+import imgpgallery3 from '../assets/Lilac2.jpg';
+import imgpgallery4 from '../assets/Dining.jpg';
+import imgpgallery5 from '../assets/Jade1.jpg';
+import imgpgallery6 from '../assets/Cane1.jpg';
 
 
 import Imag from '../assets/Pool.jpg';
@@ -66,22 +67,27 @@ const Header = () => {
       src: imgpgallery2,
       alt: "Modern kitchen interior",
     },
+    {
+      id: 4,
+      src: imgpgallery3,
+      alt: "Modern kitchen interior",
+    },
   ];
 
   const imagesRow2 = [
     {
-      id: 4,
-      src: imgpgallery3,
-      alt: "Garden view",
-    },
-    {
       id: 5,
       src: imgpgallery4,
-      alt: "Swimming pool",
+      alt: "Garden view",
     },
     {
       id: 6,
       src: imgpgallery5,
+      alt: "Swimming pool",
+    },
+    {
+      id: 7,
+      src: imgpgallery6,
       alt: "Another view of swimming pool",
     },
   ];
@@ -185,12 +191,6 @@ const Header = () => {
     }
   };
 
-  ////////////////
-  const [showMoreImages, setShowMoreImages] = useState(false);
-
-  const handleShowMoreImages = () => {
-    setShowMoreImages((prev) => !prev);
-  };
 
 
 
@@ -501,53 +501,19 @@ const Header = () => {
 
       {/* Gallery section */}
       <section ref={galleryRef}>
-      <div className="w-full mt-16">
-        <div className="mb-8 max-w-6xl mx-auto px-4 lg:px-8 text-center lg:text-left">
-          <h1 className="text-2xl lg:text-3xl font-semibold mb-4">Gallery</h1>
-          <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
-            Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens,
-            <br className="hidden md:block" />
-            private gardens, and state-of-the-art security.
-          </p>
-        </div>
+        <div className="w-full mt-16">
+          <div className="mb-8 max-w-6xl mx-auto px-4 lg:px-8 text-center lg:text-left">
+            <h1 className="text-2xl lg:text-3xl font-semibold mb-4">Gallery</h1>
+            <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+              Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens,
+              <br className="hidden md:block" />
+              private gardens, and state-of-the-art security.
+            </p>
+          </div>
 
-        {/* First Row with different sizes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-4 lg:mr-12">
-          {imagesRow1.map((image) => (
-            <div key={image.id} className="overflow-hidden group relative">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
-              />
-            </div>
-          ))}
-        </div>
 
-        {/* Second Row with uniform sizes */}
-        <div className="grid grid-cols-1 md:grid-cols-[300px_400px_400px_250px] gap-4 lg:ml-[100px] ml-3">
-          <button
-            className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24 hidden lg:block"
-            onClick={handleShowMoreImages}
-          >
-            {showMoreImages ? 'Hide Images' : 'See all Images'}
-          </button>
-
-          {/* Display images conditionally */}
-          { imagesRow2.map((image) => (
-            <div key={image.id} className="overflow-hidden group relative">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="lg:w-full w-[330px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Third Row with the same layout as the first row, shown conditionally */}
-        {showMoreImages && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-4 lg:mr-12">
+          {/* First Row with different sizes */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto p-4 lg:mr-12">
             {imagesRow1.map((image) => (
               <div key={image.id} className="overflow-hidden group relative">
                 <img
@@ -558,9 +524,27 @@ const Header = () => {
               </div>
             ))}
           </div>
-        )}
-      </div>
-    </section>
+
+          {/* Second Row with uniform sizes */}
+          <div className="grid grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto gap-4  ">
+            {/* Button only visible on lg screens */}
+           
+             
+
+           {/* Display images */}
+            {imagesRow2.map((image) => (
+              <div key={image.id} className="overflow-hidden group relative">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="lg:w-[300px] w-[330px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+                />
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
 
       <TestimonialsCarousel />
 

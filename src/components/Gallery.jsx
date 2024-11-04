@@ -126,56 +126,53 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="w-full ">
-      <div className="mb-8 max-w-6xl mx-auto p-4">
-        <h1 className="text-3xl font-semibold mb-4">Gallery</h1>
-        <p className="text-gray-600">
-          Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens,<br />
-          private gardens, and state-of-the-art security.
-        </p>
-      </div>
-
-      {/* First Row with different sizes */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-4 lg:mr-12">
-        {imagesRow1.map((image) => (
-          <div key={image.id} className="overflow-hidden group relative">
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
-            />
+    <section ref={galleryRef}>
+        <div className="w-full mt-16">
+          <div className="mb-8 max-w-6xl mx-auto px-4 lg:px-8 text-center lg:text-left">
+            <h1 className="text-2xl lg:text-3xl font-semibold mb-4">Gallery</h1>
+            <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+              Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens,
+              <br className="hidden md:block" />
+              private gardens, and state-of-the-art security.
+            </p>
           </div>
-        ))}
-      </div>
 
-      {/* Second Row with uniform sizes */}
-      <div className="grid grid-cols-1  md:grid-cols-[300px_400px_400px_250px] gap-4  lg:ml-[100px]">
-      <button className="mt-6 text-blue-600 hover:text-blue-800 font-medium">
-        See all Images
-      </button>
-        {imagesRow2.map((image) => (
-          <div key={image.id} className="overflow-hidden group relative">
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]" // Set uniform height for second row
-            />
-          </div>
-        ))}
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-4 lg:mr-12">
-        {imagesRow1.map((image) => (
-          <div key={image.id} className="overflow-hidden group relative">
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
-            />
+          {/* First Row with different sizes */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto p-4 lg:mr-12">
+            {imagesRow1.map((image) => (
+              <div key={image.id} className="overflow-hidden group relative">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+
+          {/* Second Row with uniform sizes */}
+          <div className="grid grid-cols-1 md:grid-cols-[300px_400px_400px_250px] gap-4 lg:ml-[100px] ml-3">
+            {/* Button only visible on lg screens */}
+           
+              <button className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24">
+                See all Images
+              </button>
+
+           {/* Display images */}
+            {imagesRow2.map((image) => (
+              <div key={image.id} className="overflow-hidden group relative">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="lg:w-full w-[330px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+                />
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
   );
 };
 
