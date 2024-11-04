@@ -520,29 +520,31 @@ const Header = () => {
           </div>
 
           {/* Second Row with uniform sizes */}
-          <div className="grid grid-cols-1  md:grid-cols-[300px_400px_400px_250px] gap-4  lg:ml-[100px] ml-3">
-            {/* <a
-              href="https://beachcastle.co.in/gallery/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24">
-                See all Images
-              </button>
-            </a> */}
-             <button className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24">
-                {/* See all Images */}
-              </button>
-            {imagesRow2.map((image) => (
-              <div key={image.id} className="overflow-hidden group relative">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="lg:w-full w-[330px] h-[250px]  object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]" // Set uniform height for second row
-                />
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-[300px_400px_400px_250px] gap-4 lg:ml-[100px] ml-3">
+  {/* Button only visible on lg screens */}
+  <a
+    href="https://beachcastle.co.in/gallery/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hidden lg:block"
+  >
+    <button className="mt-20 text-blue-600 hover:text-blue-800 font-medium ml-24">
+      See all Images
+    </button>
+  </a>
+  
+  {/* Display images */}
+  {imagesRow2.map((image) => (
+    <div key={image.id} className="overflow-hidden group relative">
+      <img
+        src={image.src}
+        alt={image.alt}
+        className="lg:w-full w-[330px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+      />
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
 
