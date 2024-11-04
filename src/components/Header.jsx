@@ -538,7 +538,7 @@ const Header = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="lg:w-full h-[250px]  object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]" // Set uniform height for second row
+                  className="lg:w-full w-[330px] h-[250px]  object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]" // Set uniform height for second row
                 />
               </div>
             ))}
