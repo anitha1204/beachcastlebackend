@@ -17,12 +17,12 @@ const ContactSection = () => {
           </div>
 
           {/* Right Section */}
-          <div className="space-y-4 lg:ml-28 fond-bold">
-            <p className='font-bold text-center lg:ml-[55px]'>
+          <div className="space-y-4 lg:ml-28 fond-bold lg:text-end">
+            <p className='font-bold '>
               More Info:<a href="https://beachcastle.co.in/" className="text-primary">https://beachcastle.co.in/</a>
             </p>
             <p className='font-bold '>13, Sea Shell Avenue, Akkarai, ECR, Chennai - 600119</p>
-            <p className='font-bold lg:ml-6'>(+91) 88388 92623 | theglasshouseecr@gmail.com</p>
+            <p className='font-bold '>(+91) 88388 92623 | theglasshouseecr@gmail.com</p>
           </div>
         </div>
       </footer>
