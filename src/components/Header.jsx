@@ -198,7 +198,7 @@ const Header = () => {
     <>
       {/* Header Section */}
       <section className="mt-10">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_180px_140px] gap-4 px-4">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_180px_140px] gap-4 px-4 mr-[200px]">
           {/* Left Section: Company Logo */}
           <div className="flex justify-center md:justify-start">
             <img src={logo} alt="Beach Castle Logo" className="h-20 md:h-[100px] w-auto" />
@@ -245,7 +245,7 @@ const Header = () => {
 
       {/* Header Section */}
       <section className="lg:mt-20 mt-10">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[630px_500px_140px] gap-4 px-4 ">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[600px_500px_180px] gap-4 px-4 mr-[200px]">
           {/* Left Section: Main Title */}
           <div className='text-center lg:text-start '>
             <h1 className='text-xl sm:text-2xl md:text-6xl text-primary mb-6'>A Comfortable Resort Experience</h1>
@@ -274,7 +274,7 @@ const Header = () => {
       </section>
 
       {/* Header Section */}
-      <section className="lg:mt-8">
+      {/* <section className="lg:mt-8">
         <div className="flex flex-col items-center">
           <div className="flex flex-col sm:flex-row items-center mt-10">
             <div className="flex space-x-4 overflow-x-auto">
@@ -288,7 +288,7 @@ const Header = () => {
                         : index === 1 ? 'w-[250px] sm:w-[200px] md:w-[280px] h-[200px] md:h-[300px] lg:w-[300px] lg:h-[260px]'
                           : 'w-[300px] sm:w-[180px] md:w-[250px] h-[250px] md:h-[350px] lg:w-[430px] lg:h-[330px]'}`}
                   />
-                  {/* Conditionally render heading and paragraph only for the second image */}
+                 
                   {index === 1 && (
                     <div className="mt-4">
                       <h2 className="lg:text-xl font-bold text-gray-700 text-start">Best Place for Weekend Plans</h2>
@@ -319,7 +319,52 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
+
+<section className="lg:mt-8">
+  <div className="flex flex-col items-center">
+    <div className="flex flex-col sm:flex-row items-center mt-10">
+      <div className="relative flex-shrink-0 overflow-hidden">
+        {/* Single Image with animation */}
+        <img
+          src={currentImages[0]} // Display only the first image
+          alt="Banner"
+          className="object-cover rounded-2xl p-2 transition-transform transform duration-500 w-[1450px] h-[600px]" // Add a hover effect for animation
+        />
+        {/* Optionally add text and description */}
+        <div className="mt-4 text-center">
+          {/* <h2 className="lg:text-xl font-bold text-gray-700">Best Place for Weekend Plans</h2>
+          <p className="lg:text-sm text-[12px] text-gray-500 mt-2 lg:max-w-[300px] mx-auto">
+            Lorem ipsum dolor sit amet consectetur. Magna enim amet risus facilisis mauris lectus.
+          </p> */}
+          {/* <button
+            className="mt-4 text-blue-600"
+            onClick={() => {
+              galleryRef.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            See all
+          </button> */}
+        </div>
+      </div>
+    </div>
+
+    {/* Navigation Buttons */}
+    <div className="flex justify-center space-x-4 mb-4 sm:mb-0 mt-10">
+      <button onClick={handlePrev} className="flex items-center text-gray-600 hover:text-gray-800">
+        <FaArrowLeft className="text-xl" />
+        <p className="text-xl mb-2 p-2">Prev</p>
+      </button>
+      <button onClick={handleNext} className="flex items-center text-gray-600 hover:text-gray-800">
+        <p className="text-xl mb-2 p-2">Next</p>
+        <FaArrowRight className="text-xl" />
+      </button>
+    </div>
+  </div>
+</section>
+
 
       {/* About section */}
       <div className="px-4 md:px-6 lg:px-12  md:py-12 ">
