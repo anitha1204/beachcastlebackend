@@ -198,7 +198,7 @@ const Header = () => {
     <>
       {/* Header Section */}
       <section className="mt-10">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_180px_140px] gap-4 px-4 mr-[200px]">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_180px_140px] gap-4 px-4 lg:mr-[200px]">
           {/* Left Section: Company Logo */}
           <div className="flex justify-center md:justify-start">
             <img src={logo} alt="Beach Castle Logo" className="h-20 md:h-[100px] w-auto" />
@@ -245,7 +245,7 @@ const Header = () => {
 
       {/* Header Section */}
       <section className="lg:mt-20 mt-10">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[600px_500px_180px] gap-4 px-4 mr-[200px]">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[600px_500px_180px] gap-4 px-4 lg:mr-[200px]">
           {/* Left Section: Main Title */}
           <div className='text-center lg:text-start '>
             <h1 className='text-xl sm:text-2xl md:text-6xl text-primary mb-6'>A Comfortable Resort Experience</h1>
