@@ -321,49 +321,32 @@ const Header = () => {
         </div>
       </section> */}
 
-<section className="lg:mt-8">
-  <div className="flex flex-col items-center">
-    <div className="flex flex-col sm:flex-row items-center mt-10">
-      <div className="relative flex-shrink-0 overflow-hidden">
-        {/* Single Image with animation */}
-        <img
-          src={currentImages[0]} // Display only the first image
-          alt="Banner"
-          className="object-cover rounded-2xl p-2 transition-transform transform duration-500 w-[1450px] h-[600px]" // Add a hover effect for animation
-        />
-        {/* Optionally add text and description */}
-        <div className="mt-4 text-center">
-          {/* <h2 className="lg:text-xl font-bold text-gray-700">Best Place for Weekend Plans</h2>
-          <p className="lg:text-sm text-[12px] text-gray-500 mt-2 lg:max-w-[300px] mx-auto">
-            Lorem ipsum dolor sit amet consectetur. Magna enim amet risus facilisis mauris lectus.
-          </p> */}
-          {/* <button
-            className="mt-4 text-blue-600"
-            onClick={() => {
-              galleryRef.current?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
-          >
-            See all
-          </button> */}
-        </div>
-      </div>
-    </div>
+      <section className="">
+        <div className="flex flex-col items-center">
+          <div className="flex flex-col sm:flex-row items-center mt-10">
+            <div className="relative flex-shrink-0 overflow-hidden">
+              {/* Single Image with animation */}
+              <img
+                src={currentImages[0]} // Display only the first image
+                alt="Banner"
+                className="object-cover rounded-2xl p-2 transition-transform transform duration-500 w-[1450px] h-[600px]" // Add a hover effect for animation
+              />
+            </div>
+          </div>
 
-    {/* Navigation Buttons */}
-    <div className="flex justify-center space-x-4 mb-4 sm:mb-0 mt-10">
-      <button onClick={handlePrev} className="flex items-center text-gray-600 hover:text-gray-800">
-        <FaArrowLeft className="text-xl" />
-        <p className="text-xl mb-2 p-2">Prev</p>
-      </button>
-      <button onClick={handleNext} className="flex items-center text-gray-600 hover:text-gray-800">
-        <p className="text-xl mb-2 p-2">Next</p>
-        <FaArrowRight className="text-xl" />
-      </button>
-    </div>
-  </div>
-</section>
+          {/* Navigation Buttons */}
+          <div className="flex justify-center space-x-4 mb-4 sm:mb-0 mt-10">
+            <button onClick={handlePrev} className="flex items-center text-gray-600 hover:text-gray-800">
+              <FaArrowLeft className="text-xl" />
+              <p className="text-xl mb-2 p-2">Prev</p>
+            </button>
+            <button onClick={handleNext} className="flex items-center text-gray-600 hover:text-gray-800">
+              <p className="text-xl mb-2 p-2">Next</p>
+              <FaArrowRight className="text-xl" />
+            </button>
+          </div>
+        </div>
+      </section>
 
 
       {/* About section */}
@@ -460,7 +443,7 @@ const Header = () => {
           </div> */}
 
           {/* Other Image Items - Same Size */}
-          {[[img, "Swimming pool"],[img1, "Lawn"], [img2, "Service Area"], [img3, "Covered Lawn"]].map(([image, title], index) => (
+          {[[img, "Swimming pool"], [img1, "Lawn"], [img2, "Service Area"], [img3, "Covered Lawn"]].map(([image, title], index) => (
             <div key={index} className="relative group w-64 h-72 overflow-hidden rounded-[30px]">
               <div className="w-full h-full overflow-hidden rounded-[30px] transition-all duration-300 group-hover:h-60">
                 <img src={image} alt={`Facility ${index + 1}`} className="w-full h-full object-cover" />
@@ -572,7 +555,7 @@ const Header = () => {
 
           {/* Second Row with uniform sizes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:max-w-5xl max-w-7xl mx-auto p-4 lg:mr-40 ">
-           {/* Display images */}
+            {/* Display images */}
             {imagesRow2.map((image) => (
               <div key={image.id} className="overflow-hidden group relative">
                 <img
