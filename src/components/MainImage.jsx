@@ -189,11 +189,14 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/Asset 1 1.png';
 import Bannerimg from "../assets/bnr_1.jpg";
-import Bannerimg1 from "../assets/bnr_2.jpg";
-import Bannerimg2 from "../assets/bnr_3.jpg";
-import Bannerimg3 from "../assets/bnr_4.jpg";
-import Bannerimg4 from "../assets/bnr_5.jpg";
+import Bannerimg1 from "../assets/bnr_7.jpg";
+import Bannerimg2 from "../assets/bnr_8.jpg";
+import Bannerimg3 from "../assets/bnr_9.jpg";
+import Bannerimg4 from "../assets/bnr_2.jpg";
 import Bannerimg5 from "../assets/bnr_3.jpg";
+import Bannerimg6 from "../assets/bnr_4.jpg";
+import Bannerimg7 from "../assets/bnr_5.jpg";
+
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { HiLocationMarker, HiPhone } from 'react-icons/hi';
 import { Link } from "react-router-dom";
@@ -205,16 +208,20 @@ const MainImage = () => {
   const images = [
     { img: Bannerimg, heading: "An Iconic Venue on Chennai’s ECR", description: "Beach Castle becomes the quintessential venue for those seeking a blend of heritage charm and premium hospitality." },
     { img: Bannerimg1, heading: "Where Luxury Meets Tradition", description: " Beach Castle embodies a unique blend of tradition and modern comfort. From expansive lawns to a 7BHK villa" },
-    { img: Bannerimg2, heading: "Immerse yourself in the grandeur", description: " of our Chettinad-style villa. Known for its distinctive architectural beauty and rich history." },
-    { img: Bannerimg3, heading: "Discover serenity at Beach Castle.", description: " The perfect blend of nature’s tranquility and luxurious amenities." },
-    { img: Bannerimg4, heading: "Celebrate special moments with", description: " unparalleled elegance. From weddings to events, Beach Castle sets the stage for unforgettable experiences." },
-    { img: Bannerimg5, heading: "Relax, unwind, and rejuvenate", description: " in the luxurious surroundings of Beach Castle. A retreat like no other." },
+    { img: Bannerimg2, heading: "Where Luxury Meets Tradition", description: " Beach Castle embodies a unique blend of tradition and modern comfort. From expansive lawns to a 7BHK villa" },
+    { img: Bannerimg3, heading: "Where Luxury Meets Tradition", description: " Beach Castle embodies a unique blend of tradition and modern comfort. From expansive lawns to a 7BHK villa" },
+    { img: Bannerimg4, heading: "Immerse yourself in the grandeur", description: " of our Chettinad-style villa. Known for its distinctive architectural beauty and rich history." },
+    { img: Bannerimg5, heading: "Discover serenity at Beach Castle.", description: " The perfect blend of nature’s tranquility and luxurious amenities." },
+    { img: Bannerimg6, heading: "Celebrate special moments with", description: " unparalleled elegance. From weddings to events, Beach Castle sets the stage for unforgettable experiences." },
+    { img: Bannerimg7, heading: "Relax, unwind, and rejuvenate", description: " in the luxurious surroundings of Beach Castle. A retreat like no other." },
     // Repeat the images if needed to cycle
     { img: Bannerimg1, heading: "Where Luxury Meets Tradition", description: "Beach Castle embodies a unique blend of tradition and modern comfort. From expansive lawns to a 7BHK villa" },
-    { img: Bannerimg2, heading: "Immerse yourself in the grandeur", description: " of our Chettinad-style villa. Known for its distinctive architectural beauty and rich history." },
-    { img: Bannerimg3, heading: "Discover serenity at Beach Castle.", description: " The perfect blend of nature’s tranquility and luxurious amenities." },
-    { img: Bannerimg4, heading: "Celebrate special moments with", description: " unparalleled elegance. From weddings to events, Beach Castle sets the stage for unforgettable experiences." },
-    { img: Bannerimg5, heading: "Relax, unwind, and rejuvenate", description: " in the luxurious surroundings of Beach Castle. A retreat like no other." },
+    { img: Bannerimg2, heading: "Where Luxury Meets Tradition", description: "Beach Castle embodies a unique blend of tradition and modern comfort. From expansive lawns to a 7BHK villa" },
+    { img: Bannerimg3, heading: "Where Luxury Meets Tradition", description: "Beach Castle embodies a unique blend of tradition and modern comfort. From expansive lawns to a 7BHK villa" },
+    { img: Bannerimg4, heading: "Immerse yourself in the grandeur", description: " of our Chettinad-style villa. Known for its distinctive architectural beauty and rich history." },
+    { img: Bannerimg5, heading: "Discover serenity at Beach Castle.", description: " The perfect blend of nature’s tranquility and luxurious amenities." },
+    { img: Bannerimg6, heading: "Celebrate special moments with", description: " unparalleled elegance. From weddings to events, Beach Castle sets the stage for unforgettable experiences." },
+    { img: Bannerimg7, heading: "Relax, unwind, and rejuvenate", description: " in the luxurious surroundings of Beach Castle. A retreat like no other." },
     { img: Bannerimg, heading: "An Iconic Venue on Chennai’s ECR", description: "Beach Castle becomes the quintessential venue for those seeking a blend of heritage charm and premium hospitality." },
   ];
 
