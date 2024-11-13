@@ -661,12 +661,7 @@ const Header = () => {
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, [currentIndex]);
 
-  const currentImages = images.slice(
-    currentIndex * imagesPerPage,
-    currentIndex * imagesPerPage + imagesPerPage
-  );
-
-
+ 
   useEffect(() => {
     const intervalId = setInterval(handleNext, 5000);
     return () => clearInterval(intervalId);
@@ -748,7 +743,7 @@ const Header = () => {
         {/* Heading Section */}
         <div className="lg:text-start mb-6 lg:ml-96 text-center">
           <h1 className="text-xl sm:text-2xl md:text-6xl text-primary mb-6">
-            Your Premier Destination for <br /><span>Unforgettable Celebrations</span>
+          Celebrate Life’s Biggest <br /><span> Moments in Style</span>
           </h1>
           <h2 className="text-lg sm:text-2xl md:text-2xl font-bold lg:mt-[60px]">
             About Beach Castle
@@ -842,7 +837,7 @@ const Header = () => {
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_1fr] gap-4 items-center">
             <div className="md:ml-24 text-center md:text-left">
               <h1 className="text-xl sm:text-2xl md:text-6xl  text-primary leading-tight">
-                This Place is Perfect for Enjoyment
+              A Place Where Happiness Finds You
               </h1>
             </div>
 
