@@ -195,6 +195,8 @@ import Bannerimg3 from "../assets/bnr_4.jpg";
 import Bannerimg4 from "../assets/bnr_5.jpg";
 import Bannerimg5 from "../assets/bnr_3.jpg";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { HiLocationMarker, HiPhone } from 'react-icons/hi';
+import { Link } from "react-router-dom";
 
 const MainImage = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -243,11 +245,37 @@ const MainImage = () => {
     <>
       {/* Header Section */}
       <section className="mt-10">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_180px_140px] gap-4 px-4 lg:mr-[200px]">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_150px_300px] gap-4 px-4 lg:mr-[200px]">
           {/* Left Section: Company Logo */}
           <div className="flex justify-center md:justify-start">
             <img src={logo} alt="Beach Castle Logo" className="h-20 md:h-[100px] w-auto" />
           </div>
+          <div>
+
+          </div>
+          <div className="text-sm text-center md:text-right">
+      {/* Location Section */}
+      <div className="flex flex-col  md:items-start space-y-4 mt-2 text-primary ">
+        
+        {/* Address Link */}
+        <Link
+          to="https://www.google.com/maps/place/Beach+Castle+Wedding+Venue/@12.892396,80.250995,16z/data=!4m6!3m5!1s0x3a525b55c3d80d49:0xe8476d5b20d07fd3!8m2!3d12.8923963!4d80.250995!16s%2Fg%2F11ln9bcmn7?hl=en&entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center md:justify-start space-x-2"
+        >
+          <HiLocationMarker className="text-primary" size={24} />
+          <p className="text-start">13, Sea Shell Avenue, Akkarai, ECR, Chennai - 600119</p>
+        </Link>
+        
+        {/* Phone Link */}
+        <Link to="tel:+918841177234" className="flex  space-x-2">
+          <HiPhone className="text-primary" size={24} />
+          <p>(+91) 88388 92623</p>
+        </Link>
+        
+      </div>
+    </div>
         </div>
       </section>
 
@@ -263,7 +291,7 @@ const MainImage = () => {
 
             {/* Text Overlay */}
             <div className="absolute object-cover rounded-xl inset-0 flex flex-col lg:w-[1435px] lg:h-[582px] w-[305px] h-[585px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-40 p-5 lg:mt-2 lg:ml-2">
-            {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-white"> */}
+              {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-white"> */}
               <h2 className="lg:text-3xl text-2xl font-semibold text-center">{currentContent.heading}</h2>
               <p className="text-sm mt-2 text-center">{currentContent.description}</p>
             </div>
