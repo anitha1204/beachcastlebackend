@@ -290,7 +290,7 @@ const MainImage = () => {
             />
 
             {/* Text Overlay */}
-            <div className="absolute object-cover rounded-xl inset-0 flex flex-col lg:w-[1435px] lg:h-[582px] w-[330px] h-[585px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-40 p-5 lg:mt-2 lg:ml-2">
+            <div className="absolute object-cover rounded-xl inset-0 flex flex-col lg:w-[1435px] lg:h-[582px] w-[340px] h-[585px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-40 p-5 lg:mt-2 lg:ml-2">
               {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-white"> */}
               <h2 className="lg:text-3xl text-2xl font-semibold text-center">{currentContent.heading}</h2>
               <p className="text-sm mt-2 text-center">{currentContent.description}</p>
