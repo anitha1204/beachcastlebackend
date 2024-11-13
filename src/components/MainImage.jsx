@@ -253,7 +253,7 @@ const MainImage = () => {
           <div>
 
           </div>
-          <div className="text-sm text-center md:text-right">
+          <div className="text-sm text-center md:text-right ">
       {/* Location Section */}
       <div className="flex flex-col  md:items-start space-y-4 mt-2 text-primary ">
         
@@ -264,7 +264,7 @@ const MainImage = () => {
           rel="noopener noreferrer"
           className="flex items-center justify-center md:justify-start space-x-2"
         >
-          <HiLocationMarker className="text-primary" size={24} />
+          <HiLocationMarker className="text-primary" size={32} />
           <p className="text-start">13, Sea Shell Avenue, Akkarai, ECR, Chennai - 600119</p>
         </Link>
         
