@@ -7,7 +7,7 @@ const TestimonialSlider = () => {
 
   const testimonials = [
     {
-      text: " f you're searching for a spacious venue near the beach for weddings or functions, 'Beach Castle' is an ideal choice. This location typically offers, ample space for large gatherings, and a perfect ambiance for both traditional and contemporary ceremonies. It often includes facilities like catering, decorations, and accommodations, making it a convenient all-in-one solution for weddings or large events. For more details, I recommend checking out their website or contacting them directly to explore what specific amenities they offer.",
+      text: " If you're searching for a spacious venue near the beach for weddings or functions, 'Beach Castle' is an ideal choice. This location typically offers, ample space for large gatherings, and a perfect ambiance for both traditional and contemporary ceremonies. It often includes facilities like catering, decorations, and accommodations, making it a convenient all-in-one solution for weddings or large events. For more details, I recommend checking out their website or contacting them directly to explore what specific amenities they offer.",
       author: "Viki"
     },
     {

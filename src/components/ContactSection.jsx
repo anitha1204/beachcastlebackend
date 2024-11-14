@@ -27,8 +27,7 @@ const ContactSection = () => {
         </div>
       </footer>
       <div className='flex flex-col md:flex-row justify-between items-center mb-4 text-sm text-primary'>
-        <p className='space-x-6 lg:ml-[130px]'>Copyright © 2024 BeachCastle</p>
-        <p className='space-x-2 lg:mr-[130px]'>All rights reserved</p>
+        <p className='space-x-6 lg:ml-[130px]'>Copyright © 2024 BeachCastle.All rights reserved.</p>
       </div>
     </div>
   );
