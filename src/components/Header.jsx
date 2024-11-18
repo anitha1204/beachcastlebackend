@@ -778,10 +778,10 @@ const Header = () => {
             />
 
             {/* Text Overlay */}
-            <div className="absolute object-cover rounded-xl inset-0 flex flex-col w-[305px] h-[585px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-30 p-5 lg:w-[1435px] lg:h-[582px]">
-              <h2 className="lg:text-5xl text-3xl font-semibold text-center">{currentContent.heading}</h2>
+            <div className="absolute object-cover rounded-xl inset-0 flex flex-col w-[305px] h-[165px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-30 p-5 lg:w-[1435px] lg:h-[582px]">
+              <h2 className="lg:text-5xl text-2xl font-semibold text-center">{currentContent.heading}</h2>
               <p className="hidden lg:block lg:text-2xl mt-6 text-center lg:w-[750px]">{currentContent.description}</p>
-              <button className="text-white bg-black py-3 px-9 rounded-[50px] shadow-lg transition-transform duration-300 transform hover:scale-105 mt-4"
+              <button className="text-white bg-black lg:py-3 lg:px-9 py-2 px-6 rounded-[50px] shadow-lg transition-transform duration-300 transform hover:scale-105 mt-4"
                 onClick={() => {
                   contactRef.current?.scrollIntoView({
                     behavior: "smooth",
@@ -793,7 +793,7 @@ const Header = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center space-x-4 mb-4 sm:mb-0 mt-10">
+          <div className="flex justify-center space-x-4 mb-4 sm:mb-0 lg:mt-10">
             <button onClick={handlePrevs} className="flex items-center text-gray-600 hover:text-gray-800 space-x-2 p-2">
               <FaArrowLeft className="text-xl" />
               <p className="text-xl">Prev</p>
