@@ -779,9 +779,9 @@ const Header = () => {
 
             {/* Text Overlay */}
             <div className="absolute object-cover rounded-xl inset-0 flex flex-col w-[345px] h-[165px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-30 p-5 lg:w-[1435px] lg:h-[582px]">
-              <h2 className="lg:text-5xl text-2xl font-semibold text-center">{currentContent.heading}</h2>
+              <h2 className="lg:text-5xl text-xl font-semibold text-center">{currentContent.heading}</h2>
               <p className="hidden lg:block lg:text-2xl mt-6 text-center lg:w-[750px]">{currentContent.description}</p>
-              <button className="text-white bg-black lg:py-3 lg:px-9 py-2 px-6 rounded-[50px] shadow-lg transition-transform duration-300 transform hover:scale-105 mt-4"
+              <button className="text-white bg-black lg:py-3 lg:px-9 text-[12px] py-2 px-6 rounded-[50px] shadow-lg transition-transform duration-300 transform hover:scale-105 mt-4"
                 onClick={() => {
                   contactRef.current?.scrollIntoView({
                     behavior: "smooth",
@@ -793,8 +793,8 @@ const Header = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center space-x-4 mb-4 sm:mb-0 lg:mt-10">
-            <button onClick={handlePrevs} className="flex items-center text-gray-600 hover:text-gray-800 space-x-2 p-2">
+          <div className="flex justify-center space-x-4 mb-4 sm:mb-0 lg:mt-10 hidden lg:flex">
+            <button onClick={handlePrevs} className="flex items-center text-gray-600 hover:text-gray-800 space-x-2 p-2 ">
               <FaArrowLeft className="text-xl" />
               <p className="text-xl">Prev</p>
             </button>
@@ -808,7 +808,7 @@ const Header = () => {
 
 
       {/* About section */}
-      <div className="px-4 md:px-6 lg:px-12  md:py-12 ">
+      <div className="px-4 py-4 md:px-6 lg:px-12 md:py-12 ">
         {/* Heading Section */}
         <div className="lg:text-start mb-6 lg:ml-96 text-center font-neue">
           <h1 className="text-xl sm:text-2xl md:text-6xl text-primary mb-6">
