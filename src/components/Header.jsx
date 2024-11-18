@@ -781,7 +781,7 @@ const Header = () => {
             <div className="absolute object-cover rounded-xl inset-0 flex flex-col w-[345px] h-[165px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-30 p-5 lg:w-[1435px] lg:h-[582px]">
               <h2 className="lg:text-5xl text-lg font-semibold text-center">{currentContent.heading}</h2>
               <p className="hidden lg:block lg:text-2xl mt-6 text-center lg:w-[750px]">{currentContent.description}</p>
-              <button className="text-white bg-black lg:py-3 lg:px-9 text-[12px] py-2 px-6 rounded-[50px] shadow-lg transition-transform duration-300 transform hover:scale-105 mt-4"
+              <button className="text-white bg-black lg:py-3 lg:px-9 lg:text-lg text-[12px] py-2 px-6 rounded-[50px] shadow-lg transition-transform duration-300 transform hover:scale-105 mt-4"
                 onClick={() => {
                   contactRef.current?.scrollIntoView({
                     behavior: "smooth",
@@ -811,10 +811,12 @@ const Header = () => {
       <div className="px-4 py-4 md:px-6 lg:px-12 md:py-12 ">
         {/* Heading Section */}
         <div className="lg:text-start mb-6 lg:ml-96 text-center font-neue">
-          <h1 className="text-xl sm:text-2xl md:text-6xl text-primary mb-6">
-            Celebrate Life’s Biggest <br /><span> Moments in Style</span>
+          <h1 className="text-sm sm:text-2xl md:text-5xl text-primary mb-6 text-center sm:text-left">
+            Celebrate Life’s Biggest 
+            <span className=""> Moments in Style</span>
           </h1>
-          <h2 className="text-xl md:text-4xl lg:text-3xl lg:mt-[60px] text-primary">
+
+          <h2 className="text-xl md:text-4xl lg:text-3xl lg:mt-[40px] text-primary ">
             About Beach Castle
           </h2>
         </div>
@@ -1031,7 +1033,7 @@ const Header = () => {
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col items-center w-full lg:flex-row lg:justify-between">
-              <h2 className="text-primary text-3xl mb-4 lg:mb-0 lg:mr-4 whitespace-nowrap font-neue">
+              <h2 className="text-primary text-lg lg:text-3xl mb-4 lg:mb-0 lg:mr-4 whitespace-nowrap font-neue">
                 Enquiry Now
               </h2>
               <div className="flex flex-col lg:flex-row gap-4 items-center w-full lg:w-auto">

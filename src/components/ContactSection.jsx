@@ -46,7 +46,7 @@ const ContactSection = () => {
         <div className="container mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 font-neue">
           {/* Left Section */}
           <div>
-            <h2 className="text-2xl lg:text-3xl mb-4 text-primary">Contact Us</h2>
+            <h2 className="text-lg lg:text-3xl mb-4 text-primary">Contact Us</h2>
             <p className="text-sm md:text-md lg:text-lg mb-8 mt-3 text-gray-500">
               Ready to start planning your unforgettable event? Contact us today to learn more about Beach Castle and to book your date. Our dedicated team is here to assist you in creating the perfect celebration.
             </p>
