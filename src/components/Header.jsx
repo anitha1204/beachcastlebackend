@@ -778,7 +778,7 @@ const Header = () => {
             />
 
             {/* Text Overlay */}
-            <div className="absolute object-cover rounded-xl inset-0 flex flex-col w-[340px] h-[165px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-30 p-5 lg:w-[1435px] lg:h-[582px]">
+            <div className="absolute object-cover rounded-xl inset-0 flex flex-col w-[345px] h-[165px] ml-2 mt-2 items-center justify-center text-white bg-black bg-opacity-30 p-5 lg:w-[1435px] lg:h-[582px]">
               <h2 className="lg:text-5xl text-2xl font-semibold text-center">{currentContent.heading}</h2>
               <p className="hidden lg:block lg:text-2xl mt-6 text-center lg:w-[750px]">{currentContent.description}</p>
               <button className="text-white bg-black lg:py-3 lg:px-9 py-2 px-6 rounded-[50px] shadow-lg transition-transform duration-300 transform hover:scale-105 mt-4"
