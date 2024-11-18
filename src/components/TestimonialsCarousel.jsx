@@ -57,10 +57,10 @@ const TestimonialSlider = () => {
               index === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
-            <p className="text-center text-gray-700 text-md md:text-lg lg:text-lg mb-8 max-w-4xl mx-auto">
+            <p className="text-center text-gray-500 text-md md:text-lg lg:text-lg mb-8 max-w-4xl mx-auto font-neue">
               {testimonial.text}
             </p>
-            <p className="text-center text-gray-500 font-medium">
+            <p className="text-center text-primary text-lg font-neue">
               {testimonial.author}
             </p>
           </div>

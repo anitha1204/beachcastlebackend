@@ -736,16 +736,16 @@ const Header = () => {
   return (
     <>
       
-        <section className="mt-10">
-  <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_150px_300px] gap-4 px-4 lg:mr-[200px]">
-    {/* Left Section: Company Logo */}
-    <div className="flex justify-center md:justify-start">
-      <img src={logo} alt="Beach Castle Logo" className="h-20 md:h-[100px] w-auto" />
-    </div>
-    <div></div>
-    <div className="text-sm text-center md:text-right">
-      {/* Location Section */}
-      <div className="flex flex-col md:items-start space-y-4 mt-2 text-primary">
+        <section className="mt-10 ">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-[720px_370px_300px] gap-4 px-4 lg:mr-[180px]">
+       {/* Left Section: Company Logo */}
+           <div className="flex justify-center md:justify-start">
+              <img src={logo} alt="Beach Castle Logo" className="h-20 md:h-[100px] w-auto" />
+           </div>
+         <div></div>
+         <div className="text-sm text-center md:text-right">
+         {/* Location Section */}
+         <div className="flex flex-col md:items-start space-y-4 mt-2 text-primary">
         {/* Address Link */}
         <Link
           to="https://www.google.com/maps/place/Beach+Castle+Wedding+Venue/@12.892396,80.250995,16z/data=!4m6!3m5!1s0x3a525b55c3d80d49:0xe8476d5b20d07fd3!8m2!3d12.8923963!4d80.250995!16s%2Fg%2F11ln9bcmn7?hl=en&entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
@@ -810,18 +810,18 @@ const Header = () => {
       {/* About section */}
       <div className="px-4 md:px-6 lg:px-12  md:py-12 ">
         {/* Heading Section */}
-        <div className="lg:text-start mb-6 lg:ml-96 text-center">
+        <div className="lg:text-start mb-6 lg:ml-96 text-center font-neue">
           <h1 className="text-xl sm:text-2xl md:text-6xl text-primary mb-6">
           Celebrate Life’s Biggest <br /><span> Moments in Style</span>
           </h1>
-          <h2 className="text-lg sm:text-2xl md:text-2xl font-bold lg:mt-[60px]">
+          <h2 className="text-xl md:text-4xl lg:text-3xl lg:mt-[60px] text-primary">
             About Beach Castle
           </h2>
         </div>
 
         {/* Description Section */}
         <div className="lg:text-start lg:max-w-4xl mx-auto lg:mr-[140px] text-center">
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed  font-Montserrat">
+          <p className="text-gray-500 text-sm lg:text-lg mb-6 mt-4 leading-relaxed font-neue">
             "At Beach Castle, we turn your special occasions into unforgettable experiences. Located on the picturesque East Coast Road (ECR) in Chennai, our opulent venue blends the classic charm of Chettinad-style architecture with contemporary amenities. Spanning a generous 45,000 sq. ft, the property features a vast open lawn and a beautifully appointed 7BHK villa. With a floating capacity of 500 guests and seating for 300, it's an ideal setting for weddings, corporate events, gatherings, and more. Our commitment to outstanding service and elegant surroundings ensures an unparalleled experience for you and your guests."
           </p>
         </div>
@@ -831,11 +831,11 @@ const Header = () => {
       <section className=" ">
         {/* Content Section */}
         <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-6 md:px-10 lg:px-16 max-w-6xl mx-auto ">
-          <div className="  md:max-w-2xl lg:max-w-4xl text-center lg:text-start mt-5">
-            <h1 className="text-xl md:text-4xl lg:text-3xl lg:mb-10">
+          <div className="  md:max-w-2xl lg:max-w-4xl text-center lg:text-start mt-5 font-neue">
+            <h1 className="text-xl md:text-4xl lg:text-3xl lg:mb-8 text-primary">
               Our Features
             </h1>
-            <p className="text-sm md:text-md lg:text-lg mb-6 mt-4">
+            <p className="text-sm md:text-md lg:text-lg mb-6 mt-4 text-gray-500">
             Every detail of your experience is thoughtfully curated to blend the serene beauty of the seaside with the elegance of traditional charm. From the intricate decor inspired by age-old customs to the warm, welcoming ambiance that resonates with cultural authenticity, we ensure that your special moments are enveloped in an air of timeless grace
             </p>
             <div className="mt-6 md:mt-0 mb-6 ">
@@ -866,11 +866,11 @@ const Header = () => {
       <section className="flex flex-col items-center px-4 md:px-10 lg:px-20 bg-white">
         {/* Heading */}
         <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-6 md:px-10 lg:px-16 max-w-4xl mx-auto lg:ml-20">
-          <div className="md:max-w-2xl lg:max-w-4xl text-center lg:text-start mt-5">
-            <h1 className="text-xl md:text-4xl lg:text-3xl lg:mb-10">
+          <div className="md:max-w-2xl lg:max-w-4xl text-center lg:text-start mt-5 font-neue">
+            <h1 className="text-xl md:text-4xl lg:text-3xl lg:mb-8 text-primary">
               Our Facilities
             </h1>
-            <p className="text-[12px] md:text-md lg:text-lg mb-6 mt-4">
+            <p className="text-sm md:text-md lg:text-lg mb-8 mt-8 text-gray-500">
             Whether it's a grand wedding ceremony or an intimate gathering, 
             our venue harmoniously merges the soothing waves of the ocean with a touch of heritage, creating a setting 
             where modern romance meets classic traditions.
@@ -903,14 +903,14 @@ const Header = () => {
       <section>
         <div className="lg:mt-20 px-4 lg:px-0 mt-10">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-[700px_1fr] gap-4 items-center">
-            <div className="md:ml-24 text-center md:text-left">
+            <div className="md:ml-24 text-center md:text-left font-neue">
               <h1 className="text-xl sm:text-2xl md:text-6xl  text-primary leading-tight">
               A Place Where Happiness Finds You
               </h1>
             </div>
 
-            <div className="text-lg space-y-4 text-center md:text-left">
-              <p className="text-primary">
+            <div className="text-lg space-y-4 text-center md:text-left font-neue">
+              <p className="text-sm md:text-md lg:text-lg mb-8 text-gray-500">
               Every moment spent here is crafted to be unforgettable, from the tranquil sea breeze that
                welcomes you to the carefully curated experiences that celebrate joy and togetherness.
               </p>
@@ -955,7 +955,7 @@ const Header = () => {
                     alt={item.heading}
                     className="object-cover rounded-[30px] w-full h-[280px] md:h-[330px] lg:h-[350px] p-2"
                   />
-                  <h3 className="text-2xl font-bold text-gray-700 mt-4 lg:text-start">{item.heading}</h3>
+                  <h3 className="text-lg md:text-4xl lg:text-2xl lg:mb-2 text-primary lg:text-start mt-2">{item.heading}</h3>
                   <p className="text-lg text-gray-500 lg:text-start">{item.description}</p>
                 </div>
               ))}
@@ -971,8 +971,8 @@ const Header = () => {
       {/* Gallery section */}
       <section ref={galleryRef}>
         <div className=" mt-16">
-          <div className="mb-8 max-w-6xl mx-auto px-4 lg:px-8 text-center lg:text-left">
-            <h1 className="text-2xl lg:text-3xl font-semibold mb-4">Gallery</h1>
+          <div className="mb-8 max-w-6xl mx-auto px-4 lg:px-8 text-center lg:text-left font-neue">
+            <h1 className="text-xl md:text-4xl lg:text-3xl lg:mb-8 text-primary">Gallery</h1>
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
               Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens,
               <br className="hidden md:block" />
@@ -1031,7 +1031,7 @@ const Header = () => {
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col items-center w-full lg:flex-row lg:justify-between">
-              <h2 className="text-primary text-2xl mb-4 lg:mb-0 lg:mr-4 whitespace-nowrap">
+              <h2 className="text-primary text-3xl mb-4 lg:mb-0 lg:mr-4 whitespace-nowrap font-neue">
                 Enquiry Now
               </h2>
               <div className="flex flex-col lg:flex-row gap-4 items-center w-full lg:w-auto">

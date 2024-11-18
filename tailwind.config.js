@@ -10,6 +10,9 @@ export default {
         primary: ' #3C585B', 
         secondary: '#4D2719',
       },
+      fontFamily: {
+        neue: ['"Neue Montreal"', 'sans-serif'], // Add the font here
+      },
     },
   },
   plugins: [],

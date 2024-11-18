@@ -17,9 +17,9 @@ const OurFacilities = () => {
             </div>
 
             {/* Text and List Section */}
-            <div className="w-full md:w-1/2 text-center md:text-left">
-                <h2 className="text-2xl font-semibold mb-4 text-primary">Our Amenities</h2>
-                <p className="text-gray-600 lg:mt-12 mb-12">
+            <div className="w-full md:w-1/2 text-center md:text-left font-neue">
+                <h2 className="text-xl md:text-4xl lg:text-3xl  text-primary">Our Amenities</h2>
+                <p className="text-sm md:text-md lg:text-lg mb-8 mt-8 text-gray-500">
                     Featuring top-notch facilities and amenities, including spacious
                     bedrooms, modern kitchens, private gardens, and state-of-the-art
                     security.
