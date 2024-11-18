@@ -810,7 +810,7 @@ const Header = () => {
       {/* About section */}
       <div className="px-4 py-4 md:px-6 lg:px-12 md:py-12 ">
         {/* Heading Section */}
-        <div className="lg:text-start mb-6 lg:ml-96 text-center font-neue">
+        <div className="lg:text-start lg:mb-6 mb-2 lg:ml-96 text-center font-neue">
           <h1 className="text-sm sm:text-2xl md:text-5xl text-primary mb-6 text-center sm:text-left">
             Celebrate Life’s Biggest 
             <span className=""> Moments in Style</span>
@@ -823,7 +823,7 @@ const Header = () => {
 
         {/* Description Section */}
         <div className="lg:text-start lg:max-w-4xl mx-auto lg:mr-[140px] text-center">
-          <p className="text-gray-500 text-sm lg:text-lg mb-6 mt-4 leading-relaxed font-neue">
+          <p className="text-gray-500 text-sm lg:text-lg lg:mb-6 leading-relaxed font-neue">
             "At Beach Castle, we turn your special occasions into unforgettable experiences. Located on the picturesque East Coast Road (ECR) in Chennai, our opulent venue blends the classic charm of Chettinad-style architecture with contemporary amenities. Spanning a generous 45,000 sq. ft, the property features a vast open lawn and a beautifully appointed 7BHK villa. With a floating capacity of 500 guests and seating for 300, it's an ideal setting for weddings, corporate events, gatherings, and more. Our commitment to outstanding service and elegant surroundings ensures an unparalleled experience for you and your guests."
           </p>
         </div>
@@ -833,7 +833,7 @@ const Header = () => {
       <section className=" ">
         {/* Content Section */}
         <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-6 md:px-10 lg:px-16 max-w-6xl mx-auto ">
-          <div className="  md:max-w-2xl lg:max-w-4xl text-center lg:text-start mt-5 font-neue">
+          <div className="  md:max-w-2xl lg:max-w-4xl text-center lg:text-start lg:mt-5 font-neue">
             <h1 className="text-xl md:text-4xl lg:text-3xl lg:mb-8 text-primary">
               Our Features
             </h1>

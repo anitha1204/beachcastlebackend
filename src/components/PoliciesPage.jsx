@@ -7,8 +7,8 @@ const PoliciesPage = () => {
       <div className="max-w-4xl w-full p-6 lg:p-12 text-center lg:text-left">
         <h1 className="text-xl md:text-4xl lg:text-5xl lg:mb-8 text-primary mb-4 lg:mb-6">Our Policies</h1>
         
-        <div className="mb-8">
-          <p className="text-sm md:text-md lg:text-lg mb-8 text-gray-500">
+        <div className="lg:mb-8">
+          <p className="text-sm md:text-md lg:text-lg text-gray-500">
             Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens, private gardens, and state-of-the-art security.
           </p>
         </div>
