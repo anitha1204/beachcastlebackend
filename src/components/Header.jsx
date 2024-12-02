@@ -194,7 +194,7 @@ const Header = () => {
     enquiry: '',
   });
 
-  const navigat = useNavigate();
+  const navigate = useNavigate();
   const contactRef = useRef();
 
   const handleChange = (e) => {
