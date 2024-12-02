@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Importing from react-icons
-import { Quote } from 'lucide-react';
+import { BiSolidQuoteAltRight } from "react-icons/bi";
 
 const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -45,7 +45,7 @@ const TestimonialSlider = () => {
     <div className="max-w-6xl mx-auto px-4 py-16 relative">
       {/* Large quote mark */}
       <div className="flex justify-center mb-8">
-        <Quote size={64} className="text-gray-300" />
+        <BiSolidQuoteAltRight size={64} className="text-primary" />
       </div>
 
       {/* Testimonial content */}
