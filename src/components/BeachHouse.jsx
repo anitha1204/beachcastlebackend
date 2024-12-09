@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import PerfectForSection from "./PerfectForSection";
 import AmenitiesFacilities from "./AmenitiesFacilities";
 
-import Bannerimg from "../assets/bnr_1.jpg";
-import Bannerimg1 from "../assets/bnr_7.jpg";
-import Bannerimg2 from "../assets/bnr_8.jpg";
-import Bannerimg3 from "../assets/bnr_9.jpg";
+import Bannerimg from "../assets/DSC07013.png";
+import Bannerimg1 from "../assets/DSC07068.png";
+import Bannerimg2 from "../assets/DSC07259.png";
+import Bannerimg3 from "../assets/DSC07289.png";
+import Bannerimg4 from "../assets/DSC07316.png";
 
 import img from "../assets/Courtyard.jpg";
 import img1 from "../assets/Hall1.jpg";
@@ -178,7 +179,7 @@ const BeachHouse = () => {
 
   const [currentImage, setCurrentImage] = useState(0);
 
-  const images = [Bannerimg, Bannerimg1, Bannerimg2, Bannerimg3];
+  const images = [Bannerimg, Bannerimg1, Bannerimg2, Bannerimg3, Bannerimg4];
 
   useEffect(() => {
     const interval = setInterval(() => {
