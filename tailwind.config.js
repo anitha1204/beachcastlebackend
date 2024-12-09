@@ -11,7 +11,7 @@ export default {
         secondary: '#4D2719',
       },
       fontFamily: {
-        neue: ['"Neue Montreal"', 'sans-serif'], // Add the font here
+        belleza: ['Belleza', 'sans-serif'],
       },
     },
   },

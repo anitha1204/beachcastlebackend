@@ -115,27 +115,25 @@ import React from "react";
 
 const PerfectForSection = () => {
   return (
-    <section>
-      <div className="mt-14 px-4">
-        <div className="bg-primary py-[85px] relative overflow-hidden h-[376px] text-white px-[100px] rounded-[30px]">
-          {/* Heading with 2xl text */}
-          <h2 className="text-5xl font-bold mb-4">
-            Your Premier Destination for Unforgettable Celebrations
-          </h2>
-          {/* Paragraph with proper spacing and color */}
-          <p className="text-lg leading-relaxed text-gray-200 py-6">
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            commodi nisi quibusdam repudiandae illo alias, saepe aut
-            reprehenderit? Nihil praesentium, necessitatibus quasi qui error
-            repudiandae. Eum id nesciunt excepturi impedit Lorem ipsum dolor sit amet 
-            consectetur adipisicing elit. Maxime
-            commodi nisi quibusdam repudiandae illo alias, saepe aut
-            reprehenderit? Nihil praesentium, necessitatibus quasi qui error
-            repudiandae. Eum id nesciunt excepturi impedit."
-          </p>
-        </div>
-      </div>
-    </section>
+    <section className="mt-14 px-4">
+    <div className="bg-primary py-12 lg:py-[85px] relative overflow-hidden h-auto lg:h-[376px] text-white px-6 lg:px-[50px] rounded-[30px]">
+      {/* Heading with responsive font sizes */}
+      <h2 className="text-2xl md:text-4xl lg:text-[45px]  font-serif font-semibold mb-4 text-center lg:text-left">
+        Your Premier Destination for Unforgettable Celebrations
+      </h2>
+      {/* Paragraph with proper spacing and responsive text */}
+      <p className="text-base md:text-lg leading-relaxed text-gray-200 py-6 text-center lg:text-left">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime commodi
+        nisi quibusdam repudiandae illo alias, saepe aut reprehenderit? Nihil
+        praesentium, necessitatibus quasi qui error repudiandae. Eum id nesciunt
+        excepturi impedit Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Maxime commodi nisi quibusdam repudiandae illo alias, saepe aut
+        reprehenderit? Nihil praesentium, necessitatibus quasi qui error
+        repudiandae. Eum id nesciunt excepturi impedit."
+      </p>
+    </div>
+  </section>
+  
   );
 };
 

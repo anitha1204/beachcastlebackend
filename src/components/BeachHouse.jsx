@@ -1,18 +1,41 @@
-import React, { useState ,useRef} from "react";
+import React, { useState, useRef ,useEffect} from "react";
 import logo from "../assets/Asset 1 1.png";
 import { HiOutlineArrowCircleRight } from "react-icons/hi";
-import Bannerimg from "../assets/bnr_1.jpg";
 import { Link } from "react-router-dom";
 import PerfectForSection from "./PerfectForSection";
-import img from '../assets/Rectangle 74.png'
 import AmenitiesFacilities from "./AmenitiesFacilities";
+
+import Bannerimg from "../assets/bnr_1.jpg";
+import Bannerimg1 from "../assets/bnr_7.jpg";
+import Bannerimg2 from "../assets/bnr_8.jpg";
+import Bannerimg3 from "../assets/bnr_9.jpg";
+
+import img from "../assets/Courtyard.jpg";
+import img1 from "../assets/Hall1.jpg";
 
 import image1 from "../assets/Rectangle 15.png";
 import image2 from "../assets/Rectangle 16.png";
-import image3 from "../assets/Rectangle 18.png";
+import image3 from "../assets/Rectangle 17.png";
+import image4 from "../assets/Rectangle 18.png";
+
+
+import swimmingPoolImg from "../assets/Rectangle 74.png";
+import diningSpaceImg from "../assets/Rectangle 17.png";
+import parkingImg from "../assets/Service area.jpg";
+import bedroomImg from "../assets/bnr_5.jpg";
+import lawnImg from "../assets/Lawn2.jpg";
+import airConditionedImg from "../assets/Rectangle 16.png";
+import kitchenImg from "../assets/Rectangle 64.png";
+import theatreImg from "../assets/Courtyard.jpg";
+
+import imgpgallery from "../assets/Lilac2.jpg";
+import imgpgallery1 from "../assets/Rectangle 8.png";
+import imgpgallery2 from "../assets/Cane1.jpg";
+import imgpgallery3 from "../assets/Plum2.jpg";
+import imgpgallery4 from "../assets/Rectangle 18.png";
+import imgpgallery5 from "../assets/bnr_7.jpg";
 
 import Policies from "./Policies";
-import Gallery from "./Gallery";
 import TestimonialsCarousel from './TestimonialsCarousel';
 
 import axios from 'axios';
@@ -20,45 +43,152 @@ import { useNavigate } from 'react-router-dom';
 
 const BeachHouse = () => {
 
-  const [activeItem, setActiveItem] = useState("Swimming Pool");
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const amenities = [
-    "Swimming Pool",
-    "Dining space",
-    "On Site Parking",
-    "Luxury Bedroom",
-    "Lawn Space",
-    "Air-conditioned",
-    "Modular Kitchen",
-    "Private Theatre",
+    {
+      name: "Swimming Pool",
+      img: swimmingPoolImg,
+      description:
+        "Enjoy a luxurious swimming experience in our state-of-the-art swimming pool.",
+    },
+    {
+      name: "Dining space",
+      img: diningSpaceImg,
+      description:
+        "Our dining space is perfect for gatherings, offering a comfortable ambiance.",
+    },
+    {
+      name: "On Site Parking",
+      img: parkingImg,
+      description:
+        "Convenient on-site parking for your vehicles, ensuring safety and ease.",
+    },
+    {
+      name: "Luxury Bedroom",
+      img: bedroomImg,
+      description:
+        "Relax in our well-furnished luxury bedrooms with top-notch amenities.",
+    },
+    {
+      name: "Lawn Space",
+      img: lawnImg,
+      description:
+        "Spacious lawns for outdoor events and relaxation in a serene environment.",
+    },
+    {
+      name: "Air-conditioned",
+      img: airConditionedImg,
+      description:
+        "Fully air-conditioned spaces for a comfortable and pleasant experience.",
+    },
+    {
+      name: "Modular Kitchen",
+      img: kitchenImg,
+      description:
+        "Cook or host events in our modern and fully equipped modular kitchen.",
+    },
+    {
+      name: "Private Theatre",
+      img: theatreImg,
+      description:
+        "Enjoy a cinematic experience in our private theatre with premium facilities.",
+    },
   ];
+
+  const activeAmenity = amenities[activeIndex];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % amenities.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [amenities.length]);
+
+  const handleItemClick = (index) => {
+    setActiveIndex(index);
+  };
 
   const cards = [
     {
       title: "Wedding Events",
       description:
         "Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens.",
-      image: image1, 
+      image: image1,
     },
     {
       title: "Corporate Meetings",
       description:
         "Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens.",
-      image: image2, 
+      image: image2,
     },
     {
       title: "Get-together",
       description:
         "Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens.",
-      image: image3, 
+      image: image3,
     },
     {
       title: "Special Occasion",
       description:
         "Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens.",
-      image: image3, 
+      image: image4,
     },
   ];
+
+  const galleryRef = useRef();
+
+  const imagesRow1 = [
+    {
+      id: 1,
+      src: imgpgallery,
+      alt: "Garden pathway with palm trees",
+    },
+    {
+      id: 2,
+      src: imgpgallery1,
+      alt: "White building entrance",
+    },
+    {
+      id: 3,
+      src: imgpgallery2,
+      alt: "Modern kitchen interior",
+    },
+  ];
+
+  // Images for the second row
+  const imagesRow2 = [
+    {
+      id: 4,
+      src: imgpgallery3,
+      alt: "Garden view",
+    },
+    {
+      id: 5,
+      src: imgpgallery4,
+      alt: "Swimming pool",
+    },
+    {
+      id: 6,
+      src: imgpgallery5,
+      alt: "Another view of swimming pool",
+    },
+  ];
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const images = [Bannerimg, Bannerimg1, Bannerimg2, Bannerimg3];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); 
+
+    
+    return () => clearInterval(interval);
+  }, [images.length]);
+
 
   const [formData, setFormData] = useState({
     userName: '',
@@ -115,96 +245,106 @@ const BeachHouse = () => {
 
   return (
     <>
-    <section className="relative w-full h-screen">
-      <div className="relative w-full h-full">
-        <img
-          src={Bannerimg}
-          alt=""
-          className="w-full h-full object-cover rounded-2xl"
-        />
-        {/* Logo Section */}
-        <div
-          className="absolute top-0 bg-white bg-opacity-100 p-2 rounded-b-2xl ml-20"
-          style={{ width: "200px", height: "180px" }}
-        >
-          <Link to="https://maahotels.in">
-            <img
-              src={logo}
-              alt="Logo"
-              className="mt-8 ml-6"
-              style={{ width: "138.42px", height: "124.33px" }}
-            />
-          </Link>
-        </div>
+      <section className="relative w-full h-screen">
+        <div className="relative w-full h-full">
+          {/* <img
+            src={Bannerimg}
+            alt=""
+            className="w-full h-full object-cover rounded-2xl"
+          /> */}
 
-        {/* Navigation Section */}
-        <div className="absolute lg:bg-white lg:bg-opacity-100 rounded-[50px] text-black lg:top-0 top-[300px] lg:ml-[800px] lg:mt-20 ml-[130px]">
-          <nav
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:w-[600px] lg:h-[45px] text-end"
-            
-          >
-            <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
-              <h2 className="text-md whitespace-nowrap lg:text-md lg:text-primary text-white">
-                Quick Chat
-              </h2>
-              {/* Add rotation effect */}
-              <HiOutlineArrowCircleRight className="lg:text-xl text-md ml-2 lg:text-gray-300 transition-transform duration-300 hover:rotate-90" />
-            </div>
-            <div className="flex items-center cursor-pointer justify-center">
-              <h2 className="text-md whitespace-nowrap lg:text-md lg:text-primary text-white">
-                About Us
-              </h2>
-              <HiOutlineArrowCircleRight className="lg:text-xl text-lg ml-2 lg:text-gray-300 transition-transform duration-300 hover:rotate-90" />
-            </div>
-            <div className="flex items-center cursor-pointer p-2 lg:justify-center">
-              <h2 className="text-md whitespace-nowrap lg:text-md lg:text-primary text-white">
-                Contact Us
-              </h2>
-              <HiOutlineArrowCircleRight className="lg:text-xl text-lg ml-2 lg:text-gray-300 transition-transform duration-300 hover:rotate-90" />
-            </div>
-            <div className="flex items-center cursor-pointer p-2 lg:justify-center">
-              <h2 className="text-md whitespace-nowrap lg:text-md lg:text-primary text-white">
-                Gallery
-              </h2>
-              <HiOutlineArrowCircleRight className="lg:text-xl text-lg ml-2 lg:text-gray-300 transition-transform duration-300 hover:rotate-90" />
-            </div>
-          </nav>
-        </div>
-      </div>
-    </section>
-
-    <PerfectForSection/>
-
-{/* -------------------------------------------------------- */}
-    <nav>
-    <div className="flex justify-center items-center space-x-6  py-12 text-lg">
-      {amenities.map((item, index) => (
+       <img
+        src={images[currentImage]}
+        alt={`Banner ${currentImage + 1}`}
+        className="w-full h-full object-cover rounded-2xl transition-all duration-700 ease-in-out"
+      />
+      {/* Optional: Add navigation buttons */}
+      <div className="absolute inset-0 flex items-center justify-between px-4">
         <button
-          key={index}
-          className={`px-4 py-2 rounded-lg ${
-            activeItem === item
-              ? "bg-gray-700 text-white"
-              : "text-gray-600 hover:text-gray-900"
-          }`}
-          onClick={() => setActiveItem(item)}
+          onClick={() =>
+            setCurrentImage((currentImage - 1 + images.length) % images.length)
+          }
+          className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-100"
         >
-          {item}
+          &#10094; {/* Left Arrow */}
         </button>
-      ))}
-    </div>
-    </nav>
+        <button
+          onClick={() => setCurrentImage((currentImage + 1) % images.length)}
+          className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-100"
+        >
+          &#10095; {/* Right Arrow */}
+        </button>
+      </div>
+          {/* Logo Section */}
+          <div
+            className="absolute top-0 bg-white bg-opacity-100 p-2 rounded-b-2xl ml-20"
+            style={{ width: "200px", height: "180px" }}
+          >
+            <Link to="https://maahotels.in">
+              <img
+                src={logo}
+                alt="Logo"
+                className="mt-8 ml-6"
+                style={{ width: "138.42px", height: "124.33px" }}
+              />
+            </Link>
+          </div>
 
-    {/* -------------------------------------------------------------------- */}
+          {/* Navigation Section */}
+          <div className="absolute lg:bg-white lg:bg-opacity-100 rounded-[50px] text-black lg:top-0 top-[300px] lg:ml-[800px] lg:mt-20 ml-[130px]">
+            <nav
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:w-[600px] lg:h-[45px] text-end"
 
-    <div className="grid grid-cols-1 md:grid-cols-[1000px_460px] gap-5 mt-4 mx-4 md:mx-4">
-        <div className=" flex items-center justify-center">
-          <img
-            src={img}
-            alt="Slideshow"
-            className="w-full lg:w-[1234.6px] lg:h-[430px] rounded-3xl object-cover"
-          />
+            >
+              <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
+                <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white">
+                  Quick Chat
+                </button>
+                {/* Add rotation effect */}
+                <HiOutlineArrowCircleRight className="lg:text-xl text-xl ml-2 lg:text-gray-300 text-white transition-transform duration-300 hover:rotate-90" />
+              </div>
+              <div className="flex items-center cursor-pointer justify-center">
+                <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white">
+                  About Us
+                </button>
+                <HiOutlineArrowCircleRight className="lg:text-xl text-xl ml-2 lg:text-gray-300 text-white transition-transform duration-300 hover:rotate-90" />
+              </div>
+              <div className="flex items-center cursor-pointer p-2 lg:justify-center"
+              onClick={() => {
+                contactRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}>
+                <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white"
+                >
+                  Contact Us
+                </button>
+                <HiOutlineArrowCircleRight className="lg:text-xl text-xl ml-2 lg:text-gray-300 text-white transition-transform duration-300 hover:rotate-90" />
+              </div>
+              <div className="flex items-center cursor-pointer p-2 lg:justify-center"
+               onClick={() => {
+                galleryRef.current?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}>
+                <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white">
+                  Gallery
+                </button>
+                <HiOutlineArrowCircleRight className="lg:text-xl text-xl ml-2 lg:text-gray-300 text-white transition-transform duration-300 hover:rotate-90" />
+              </div>
+            </nav>
+          </div>
         </div>
-        <div className="bg-gray-100 p-10 flex flex-col justify-center rounded-lg">
+      </section>
+
+      <PerfectForSection />
+      {/* ----------------------------------------------- */}
+
+      <div className="grid grid-cols-1 md:grid-cols-[40px_435px_435px_435px] gap-5 mt-4 mx-4 md:mx-4 ">
+
+        <div></div>
+
+        <div className="bg-gray-100 p-10 flex flex-col justify-center rounded-3xl">
           <h3 className="text-2xl md:text-3xl font-semibold text-center md:text-left">
             Swimming Pool
           </h3>
@@ -214,176 +354,301 @@ const BeachHouse = () => {
             United States, offering a variety of food options and delivery
             methods. Grubhub: One of the pioneers in online food ordering, known
             for its user-friendly interface and extensive restaurant network.
-           
+
           </p>
-          <button className="rounded-full  h-12 flex items-center justify-center bg-primary text-gray-50 hover:bg-gray-50 hover:text-primary mx-auto md:mx-0">
+          <button className="rounded-full lg:h-12 lg:w-full h-10 w-[150px] flex items-center justify-center bg-primary text-gray-50  mx-auto md:mx-0"
+           onClick={() => {
+            contactRef.current?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}>
+            Enquiry Now
+          </button>
+        </div>
+        <div className=" flex items-center justify-center ">
+          <img
+            src={img}
+            alt="Slideshow"
+            className="w-full lg:w-[1234.6px] lg:h-[430px] h-80 rounded-3xl object-cover"
+          />
+        </div>
+
+        <div className=" flex items-center justify-center">
+          <img
+            src={img1}
+            alt="Slideshow"
+            className="w-full lg:w-[1234.6px] lg:h-[430px] h-80 rounded-3xl object-cover"
+          />
+        </div>
+
+      </div>
+
+      {/* -------------------------------------------------------- */}
+      <nav>
+        <div className="flex flex-wrap justify-center items-center  py-6 text-sm sm:text-lg grid grid-cols-1 sm:grid-cols-2  md:grid-cols-[150px_150px_150px_180px_150px_150px_180px_150px] gap-2">
+          {amenities.map((amenity, index) => (
+            <button
+              key={index}
+              className={`px-3 py-2 rounded-lg text-center ${
+                activeIndex === index
+                  ? "bg-gray-700 text-white"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+              onClick={() => handleItemClick(index)}
+            >
+              {amenity.name}
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      {/* Image and Text Section */}
+      <div className="grid grid-cols-1 md:grid-cols-[40px_870px_460px] gap-5 mt-4 mx-4 md:mx-4">
+        {/* Left Spacer */}
+        <div></div>
+
+        {/* Image Section */}
+        <div className="flex items-center justify-center">
+          <img
+            src={activeAmenity.img}
+            alt={activeAmenity.name}
+            className="w-full lg:w-[1234.6px] lg:h-[430px] h-80 rounded-3xl object-cover"
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className="bg-gray-100 p-6 sm:p-10 flex flex-col justify-center rounded-lg">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center md:text-left">
+            {activeAmenity.name}
+          </h3>
+          <p className="text-sm sm:text-md mb-4 sm:mb-6 mt-4 sm:mt-6 mx-2 text-center md:text-left">
+            {activeAmenity.description}
+          </p>
+          <button className="rounded-full lg:h-12 lg:w-full h-10 w-[150px] flex items-center justify-center bg-primary text-gray-50  mx-auto md:mx-0"
+           onClick={() => {
+            contactRef.current?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}>
             Enquiry Now
           </button>
         </div>
       </div>
       {/* ------------------------------------------------------------------- */}
 
-      <div className="border border-primary mt-10 w-[1400px] ml-14"></div>
-      
+      <div className="border border-primary mt-10 w-full max-w-[1400px] mx-auto overflow-hidden"></div>
+
+
       {/* ----------------------------------------------------- */}
 
-      <AmenitiesFacilities/>
+      <AmenitiesFacilities />
 
       {/* ------------------------------------------------------- */}
 
       <div className=" py-16 px-4">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-semibold mb-4 text-primary ">
-          This Place is Perfect Enjoyments for
-        </h1>
-        <p className="text-lg text-gray-600">
-          Featuring top-notch facilities and amenities, including spacious
-          bedrooms, modern kitchens, private gardens, and state-of-the-art
-          security.
-        </p>
-        <button className="mt-6 px-[200px] py-3 bg-primary text-white rounded-md ">
-          Enquiry Now
-        </button>
-      </div>
-
-      <div className="flex justify-center flex-wrap lg:flex-nowrap">
-              {cards.map((cards, index) => (
-                <div key={index} className="text-center mx-4 mb-4 lg:mb-0 lg:w-1/3">
-                  <img
-                    src={cards.image}
-                    alt={cards.title}
-                    className="object-cover rounded-[30px] w-full h-[280px] md:h-[330px] lg:h-[350px] p-2"
-                  />
-                  <h3 className="text-lg md:text-4xl lg:text-2xl lg:mb-2 text-primary lg:text-start mt-2">{cards.title}</h3>
-                  <p className="text-lg text-gray-500 lg:text-start">{cards.description}</p>
-                </div>
-              ))}
-            </div>
-    </div>
-
-    {/* ------------------------------------------------------------- */}
-     
-     <Policies/>
-
-     <Gallery/>
-
-     <TestimonialsCarousel/>
-
-     {/* --------------------------------------------------------------- */}
-
-     <section className='bg-primary text-white py-2 mx-4 md:mx-4 rounded-3xl mt-10'>
-
-      <div className=" h-64 lg:h-[400px] relative mt-[150px] lg:mt-2  px-4">
-        <iframe
-          className="w-full h-full rounded-lg shadow-lg"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.775166724868!2d80.24842631482143!3d12.892396390915392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b55c3d80d49%3A0xe8476d5b20d07fd3!2sBeach%20Castle%20Wedding%20Venue!5e0!3m2!1sen!2sin!4v1676436428685!5m2!1sen!2sin"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Beach Castle Wedding Venue Location"
-        />
-      </div>
-
-      {/* contact section */}
-     
-
-      <section className=" py-12 px-4"  ref={contactRef}>
-      <div className="container mx-auto">
-       
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col lg:flex-row justify-between items-center gap-6"
-        >
-          <h2 className="text-white text-lg lg:text-3xl mb-4 lg:mb-0 lg:mr-4 primarypace-nowrap font-neue">
-                Quick Enquiry
-           </h2>
-          {/* Name Input */}
-          <input
-            type="text"
-            name="userName"
-            placeholder="Full Name"
-            value={formData.userName}
-            onChange={handleChange}
-            className="border-b-2 border-white bg-transparent text-white outline-none py-2 px-4 w-full lg:w-40"
-            required
-          />
-          {/* Mobile Number Input */}
-          <input
-            type="text"
-            name="mobile"
-            placeholder="Mobile Number"
-            value={formData.mobile}
-            onChange={handleChange}
-            className="border-b-2 border-white bg-transparent text-white outline-none py-2 px-4 w-full lg:w-40"
-            required
-          />
-          {/* Email Input */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            className="border-b-2 border-white bg-transparent text-white outline-none py-2 px-4 w-full lg:w-40"
-            required
-          />
-          {/* Enquiry Input */}
-          <select
-            name="enquiry"
-            value={formData.enquiry}
-            onChange={handleChange}
-            className="border-b-2 border-white bg-transparent text-white outline-none py-2 px-4 w-full lg:w-40"
-            required
-          >
-            <option value="" disabled>
-              Enquiry For
-            </option>
-            <option value="Service 1">Service 1</option>
-            <option value="Service 2">Service 2</option>
-            <option value="Service 3">Service 3</option>
-          </select>
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="bg-white text-gray-800 font-semibold py-2 px-8 rounded-lg hover:bg-gray-200 transition"
-          >
+        <div className="text-center mb-12">
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 text-primary">
+            This Place is Perfect Enjoyments for
+          </h1>
+          <p className="text-base md:text-lg text-gray-600">
+            Featuring top-notch facilities and amenities, including spacious bedrooms,
+            modern kitchens, private gardens, and state-of-the-art security.
+          </p>
+          <button className="mt-6 px-8 md:px-16 lg:px-[200px] py-3 bg-primary text-white rounded-md"
+           onClick={() => {
+            contactRef.current?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}>
             Enquiry Now
           </button>
-        </form>
-      </div>
-    </section>
-
-      <div className="lg:mt-10">
-      {/* Contact Us Section */}
-      <footer className="text-white  py-10">
-        <div className="container mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 font-neue">
-          {/* Left Section */}
-          <div>
-            <h2 className="text-lg lg:text-2xl mb-4 text-white ">Contact Us</h2>
-            <p className="text-sm md:text-md lg:text-md mb-8 mt-3 text-white ">
-              Ready to start planning your unforgettable event? Contact us today to learn more about Beach Castle and to book your date. Our dedicated team is here to assist you in creating the perfect celebration.
-            </p>
-          </div>
-
-          {/* Right Section */}
-          <div className="space-y-4 lg:ml-28  lg:text-end">
-            <p className="">
-              <a href="https://beachcastle.co.in/" className="text-white ">
-                www.beachcastle.co.in/
-              </a>
-            </p>
-            <p className="">13, Sea Shell Avenue, Akkarai, ECR, Chennai - 600119</p>
-            <p className="">
-              (+91) 88388 92623 | theglasshouseecr@gmail.com
-            </p>
-          </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center mb-4 text-sm text-white  font-neue">
-        <p className="space-x-6 lg:ml-[120px]">Copyright © 2024 BeachCastle. All rights reserved.</p>
+
+        <div className="flex justify-center flex-wrap lg:flex-nowrap">
+          {cards.map((cards, index) => (
+            <div key={index} className="text-center mx-4 mb-4 lg:mb-0 lg:w-[300px]">
+              <img
+                src={cards.image}
+                alt={cards.title}
+                className="object-cover rounded-[30px] w-full h-[280px] md:h-[300px] lg:h-[300px] p-2"
+              />
+              <h3 className="text-lg md:text-3xl lg:text-2xl lg:mb-2 text-primary lg:text-start mt-2">{cards.title}</h3>
+              <p className="text-md text-gray-500 lg:text-start">{cards.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-      </footer>
-      
-    </div>
+
+      {/* ------------------------------------------------------------- */}
+
+      <Policies />
+
+     {/* --------------------------------------------------- */}
+
+      {/* Gallery Header */}
+     <section className="" ref={galleryRef}>
+      <div className="w-full mt-16" >
+       
+        <div className="mb-8 max-w-10xl md:mx-4 px-4 lg:px-8 text-center">
+          <h1 className="text-2xl lg:text-3xl font-semibold mb-4">Gallery</h1>
+          <p className="text-gray-600 text-base lg:text-lg">
+            Featuring top-notch facilities and amenities, including spacious
+            bedrooms, modern kitchens,
+            <br className="hidden md:block" />
+            private gardens, and state-of-the-art security.
+          </p>
+        </div>
+
+        {/* First Row */}
+        <div className="grid grid-cols-1 md:grid-cols-[400px_400px_400px_150px] gap-4  p-4 ">
+          {imagesRow1.map((image) => (
+            <div key={image.id} className="overflow-hidden group relative">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Second Row */}
+        <div className="grid grid-cols-1 md:grid-cols-[150px_400px_400px_400px] gap-4 lg:ml-[100px] ml-3">
+          {/* Button visible only on large screens */}
+          <div></div>
+
+          {/* Display images */}
+          {imagesRow2.map((image) => (
+            <div key={image.id} className="overflow-hidden group relative">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="lg:w-full w-[330px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
+
+    {/* ---------------------------------------------------------- */}
+      <TestimonialsCarousel />
+
+      {/* --------------------------------------------------------------- */}
+
+      <section className='bg-primary text-white py-2 mx-4 md:mx-4 rounded-3xl mt-10'>
+
+        <div className=" h-64 lg:h-[400px] relative mt-[150px] lg:mt-2  px-4">
+          <iframe
+            className="w-full h-full rounded-lg shadow-lg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.775166724868!2d80.24842631482143!3d12.892396390915392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b55c3d80d49%3A0xe8476d5b20d07fd3!2sBeach%20Castle%20Wedding%20Venue!5e0!3m2!1sen!2sin!4v1676436428685!5m2!1sen!2sin"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Beach Castle Wedding Venue Location"
+          />
+        </div>
+
+        {/* contact section */}
+
+
+        <section className=" py-12 px-4" ref={contactRef}>
+          <div className="container mx-auto">
+
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col lg:flex-row justify-between items-center gap-6"
+            >
+              <h2 className="text-white text-lg lg:text-3xl mb-4 lg:mb-0 lg:mr-4 primarypace-nowrap font-neue">
+                Quick Enquiry
+              </h2>
+              {/* Name Input */}
+              <input
+                type="text"
+                name="userName"
+                placeholder="Full Name"
+                value={formData.userName}
+                onChange={handleChange}
+                className="border-b-2 border-white bg-transparent text-white outline-none py-2 px-4 w-full lg:w-40"
+                required
+              />
+              {/* Mobile Number Input */}
+              <input
+                type="text"
+                name="mobile"
+                placeholder="Mobile Number"
+                value={formData.mobile}
+                onChange={handleChange}
+                className="border-b-2 border-white bg-transparent text-white outline-none py-2 px-4 w-full lg:w-40"
+                required
+              />
+              {/* Email Input */}
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                className="border-b-2 border-white bg-transparent text-white outline-none py-2 px-4 w-full lg:w-40"
+                required
+              />
+              {/* Enquiry Input */}
+              <select
+                name="enquiry"
+                value={formData.enquiry}
+                onChange={handleChange}
+                className="border-b-2 border-white bg-transparent text-white outline-none py-2 px-4 w-full lg:w-40"
+                required
+              >
+                <option value="" disabled>
+                  Enquiry For
+                </option>
+                <option value="Service 1">Service 1</option>
+                <option value="Service 2">Service 2</option>
+                <option value="Service 3">Service 3</option>
+              </select>
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="bg-white text-gray-800 font-semibold py-2 px-8 rounded-lg hover:bg-gray-200 transition"
+              >
+                Enquiry Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <div className="lg:mt-10">
+          {/* Contact Us Section */}
+          <footer className="text-white  py-10">
+            <div className="container mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 font-neue">
+              {/* Left Section */}
+              <div>
+                <h2 className="text-lg lg:text-2xl mb-4 text-white ">Contact Us</h2>
+                <p className="text-sm md:text-md lg:text-md mb-8 mt-3 text-white ">
+                  Ready to start planning your unforgettable event? Contact us today to learn more about Beach Castle and to book your date. Our dedicated team is here to assist you in creating the perfect celebration.
+                </p>
+              </div>
+
+              {/* Right Section */}
+              <div className="space-y-4 lg:ml-28  lg:text-end">
+                <p className="">
+                  <a href="https://beachcastle.co.in/" className="text-white ">
+                    www.beachcastle.co.in/
+                  </a>
+                </p>
+                <p className="">13, Sea Shell Avenue, Akkarai, ECR, Chennai - 600119</p>
+                <p className="">
+                  (+91) 88388 92623 | theglasshouseecr@gmail.com
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row justify-between items-center mb-4 text-sm text-white  font-neue">
+              <p className="space-x-6 lg:ml-[120px]">Copyright © 2024 BeachCastle. All rights reserved.</p>
+            </div>
+          </footer>
+
+        </div>
+      </section>
 
     </>
   );

@@ -86,9 +86,9 @@
 import React from "react";
 import { FaWifi, FaTv, FaLock, FaShieldAlt } from "react-icons/fa";
 import { TbIroningSteam } from "react-icons/tb";
-// import img from '../assets/Rectangle 5.png';
-// import img1 from '../assets/Lawn2.jpg';
-// import img2 from '../assets/Service area.jpg';
+import img from '../assets/Rectangle 5.png';
+import img1 from '../assets/Lawn1.jpg';
+import img2 from '../assets/Service area.jpg';
 import img3 from '../assets/Rectangle 8.png';
 
 
@@ -97,7 +97,7 @@ const AmenitiesFacilities = () => {
     <div className="bg-primary text-white py-12 mx-4 md:mx-4 rounded-3xl mt-10">
       {/* Our Amenities Section */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-semibold mb-4">Our Amenities</h2>
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-4">Our Amenities</h2>
         <p className="text-gray-300 mb-8">
           Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens, private gardens, and state-of-the-art security.
         </p>
@@ -127,14 +127,14 @@ const AmenitiesFacilities = () => {
 
       {/* Our Facilities Section */}
       <div className="text-center">
-        <h2 className="text-4xl font-semibold mb-4">Our Facilities</h2>
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-4">Our Facilities</h2>
         <p className="text-gray-300 mb-8">
           Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens, private gardens, and state-of-the-art security.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           <div className="flex flex-col items-center">
             <img
-              src={img3}
+              src={img}
               alt="Swimming Pool"
               className="rounded-lg mb-2 "
             />
@@ -142,17 +142,17 @@ const AmenitiesFacilities = () => {
           </div>
           <div className="flex flex-col items-center">
             <img
-              src={img3}
+              src={img1}
               alt="Traditional Style Lawn"
-              className="rounded-lg mb-2"
+              className="rounded-lg mb-2 lg:h-[265px]"
             />
             <span>Traditional Style Lawn</span>
           </div>
           <div className="flex flex-col items-center">
             <img
-              src={img3}
+              src={img2}
               alt="Service Area"
-              className="rounded-lg mb-2 "
+              className="rounded-lg mb-2 lg:h-[265px]"
             />
             <span>Service Area</span>
           </div>
@@ -160,7 +160,7 @@ const AmenitiesFacilities = () => {
             <img
               src={img3}
               alt="Covered Lawn"
-              className="rounded-lg mb-2"
+              className="rounded-lg mb-2 lg:h-[265px]"
             />
             <span>Covered Lawn</span>
           </div>

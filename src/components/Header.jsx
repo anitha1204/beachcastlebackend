@@ -245,6 +245,7 @@ const Header = () => {
 
   return (
     <>
+    <Gallery/>
 
       <section className="mt-10 ">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-[720px_370px_300px] gap-4 px-4 lg:mr-[180px]">
