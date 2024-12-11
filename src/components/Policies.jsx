@@ -7,7 +7,7 @@ const Policies = () => {
       <div className="flex flex-col lg:flex-row items-start justify-center lg:space-x-12">
         {/* Left Column */}
         <div className="flex-1 space-y-6">
-          <h2 className="text-3xl md:text-4xl  font-serif font-semibold lg:ml-10">
+          <h2 className="text-3xl md:text-4xl font-semibold lg:ml-10">
             Our Policies
           </h2>
           <div>

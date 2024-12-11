@@ -7,16 +7,16 @@ const TestimonialSlider = () => {
 
   const testimonials = [
     {
-      text: " If you're searching for a spacious venue near the beach for weddings or functions, 'Beach Castle' is an ideal choice. This location typically offers, ample space for large gatherings, and a perfect ambiance for both traditional and contemporary ceremonies. It often includes facilities like catering, decorations, and accommodations, making it a convenient all-in-one solution for weddings or large events. For more details, I recommend checking out their website or contacting them directly to explore what specific amenities they offer.",
-      author: "Viki"
+      text: " Our visit to the beach villa was pure bliss. The villa’s stunning design, coupled with the breathtaking landscape, offered a perfect escape. We’re grateful to Nishtar sir, Rafica ma'am and the manager for the explaing us every landscape element and the opportunity to experience this paradise. Highly recommended for a serene getaway. Perfect wedding venue and best place to stay with family. It's a great place to spend your holiday overlooking the sea.",
+      author: " -  Sharon Sherani Daniel"
     },
     {
-      text: "Premises is incredible. It’s maintained very well.",
-      author: "Mohamed Irshath"
+      text: "Beautiful coastline scenery! Beach Castle House's magnificent gardens and immaculate coastline captured our hearts. It's a serene retreat in the midst of tropical splendour. A perfect combination of nature and luxury. The environment of Beach Castle House is very stunning.",
+      author: " - Div Ya"
     },
     {
-      text: "Amazing place! Extraordinary hosts! Rooms are extremely spacious and exactly like how it’s described in photos! It’s suitable for large events",
-      author: "Rahul Aalugadda"
+      text: "Nice ambience. Chettinadu style and good landscape. Well maintanence.The stunning landscape architecture beautiful garden and delightful staff.Perfect wedding venue and best place to stay with family. It's a great place to spend your holiday overlooking the sea.",
+      author: "-  Priya"
     }
   ];
 

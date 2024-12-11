@@ -1,4 +1,4 @@
-import React, { useState, useRef ,useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import logo from "../assets/Asset 1 1.png";
 import { HiOutlineArrowCircleRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -21,20 +21,19 @@ import image4 from "../assets/Rectangle 18.png";
 
 
 import swimmingPoolImg from "../assets/Rectangle 74.png";
-import diningSpaceImg from "../assets/Rectangle 17.png";
+import diningSpaceImg from "../assets/DSC07316.png";
 import parkingImg from "../assets/Service area.jpg";
 import bedroomImg from "../assets/bnr_5.jpg";
 import lawnImg from "../assets/Lawn2.jpg";
 import airConditionedImg from "../assets/Rectangle 16.png";
-import kitchenImg from "../assets/Rectangle 64.png";
 import theatreImg from "../assets/Courtyard.jpg";
 
 import imgpgallery from "../assets/Lilac2.jpg";
-import imgpgallery1 from "../assets/Rectangle 8.png";
-import imgpgallery2 from "../assets/Cane1.jpg";
+import imgpgallery1 from "../assets/Jade1.jpg";
+import imgpgallery2 from "../assets/Black2.jpg";
 import imgpgallery3 from "../assets/Plum2.jpg";
-import imgpgallery4 from "../assets/Rectangle 18.png";
-import imgpgallery5 from "../assets/bnr_7.jpg";
+import imgpgallery4 from "../assets/bnr_4.jpg";
+import imgpgallery5 from "../assets/Cane1.jpg";
 
 import Policies from "./Policies";
 import TestimonialsCarousel from './TestimonialsCarousel';
@@ -83,12 +82,7 @@ const BeachHouse = () => {
       description:
         "Fully air-conditioned spaces for a comfortable and pleasant experience.",
     },
-    {
-      name: "Modular Kitchen",
-      img: kitchenImg,
-      description:
-        "Cook or host events in our modern and fully equipped modular kitchen.",
-    },
+
     {
       name: "Private Theatre",
       img: theatreImg,
@@ -115,19 +109,19 @@ const BeachHouse = () => {
     {
       title: "Wedding Events",
       description:
-        "Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens.",
+        "Celebrate memorable wedding events in a beautiful setting.",
       image: image1,
     },
     {
       title: "Corporate Meetings",
       description:
-        "Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens.",
+        "Host professional corporate meetings with all amenities.",
       image: image2,
     },
     {
       title: "Get-together",
       description:
-        "Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens.",
+        "Enjoy friendly gatherings in an inviting atmosphere.",
       image: image3,
     },
     {
@@ -184,9 +178,9 @@ const BeachHouse = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); 
+    }, 3000);
 
-    
+
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -254,39 +248,39 @@ const BeachHouse = () => {
             className="w-full h-full object-cover rounded-2xl"
           /> */}
 
-       <img
-        src={images[currentImage]}
-        alt={`Banner ${currentImage + 1}`}
-        className="w-full h-full object-cover rounded-2xl transition-all duration-700 ease-in-out"
-      />
-      {/* Optional: Add navigation buttons */}
-      <div className="absolute inset-0 flex items-center justify-between px-4">
-        <button
-          onClick={() =>
-            setCurrentImage((currentImage - 1 + images.length) % images.length)
-          }
-          className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-100"
-        >
-          &#10094; {/* Left Arrow */}
-        </button>
-        <button
-          onClick={() => setCurrentImage((currentImage + 1) % images.length)}
-          className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-100"
-        >
-          &#10095; {/* Right Arrow */}
-        </button>
-      </div>
+          <img
+            src={images[currentImage]}
+            alt={`Banner ${currentImage + 1}`}
+            className="lg:w-full lg:h-full h-[600px] object-cover rounded-2xl transition-all duration-700 ease-in-out"
+          />
+          {/* Optional: Add navigation buttons */}
+          <div className="absolute inset-0 flex items-center justify-between px-4">
+            <button
+              onClick={() =>
+                setCurrentImage((currentImage - 1 + images.length) % images.length)
+              }
+              className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-100"
+            >
+              &#10094; {/* Left Arrow */}
+            </button>
+            <button
+              onClick={() => setCurrentImage((currentImage + 1) % images.length)}
+              className="bg-white bg-opacity-50 p-2 rounded-full hover:bg-opacity-100"
+            >
+              &#10095; {/* Right Arrow */}
+            </button>
+          </div>
           {/* Logo Section */}
           <div
-            className="absolute top-0 bg-white bg-opacity-100 p-2 rounded-b-2xl ml-20"
-            style={{ width: "200px", height: "180px" }}
+            className="absolute top-0 bg-white bg-opacity-100 p-2 rounded-b-2xl lg:ml-20 lg:w-[200px] lg:h-[180px] ml-[130px] "
+
           >
             <Link to="https://maahotels.in">
               <img
                 src={logo}
                 alt="Logo"
-                className="mt-8 ml-6"
-                style={{ width: "138.42px", height: "124.33px" }}
+                className="mt-8 lg:ml-6 lg:w-[138.42px] lg:h-[124.33px] w-[100px] h-[70px]"
+
               />
             </Link>
           </div>
@@ -295,39 +289,52 @@ const BeachHouse = () => {
           <div className="absolute lg:bg-white lg:bg-opacity-100 rounded-[50px] text-black lg:top-0 top-[300px] lg:ml-[800px] lg:mt-20 ml-[130px]">
             <nav
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:w-[600px] lg:h-[45px] text-end"
-
             >
-              <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
+              {/* Quick Chat - Always visible */}
+              <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center"
+                onClick={() => {
+                  contactRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}>
                 <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white">
                   Quick Chat
                 </button>
-                {/* Add rotation effect */}
                 <HiOutlineArrowCircleRight className="lg:text-xl text-xl ml-2 lg:text-gray-300 text-white transition-transform duration-300 hover:rotate-90" />
               </div>
-              <div className="flex items-center cursor-pointer justify-center">
+
+              {/* About Us - Hidden on smaller screens */}
+              <div className="flex items-center cursor-pointer justify-center hidden lg:flex">
                 <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white">
                   About Us
                 </button>
                 <HiOutlineArrowCircleRight className="lg:text-xl text-xl ml-2 lg:text-gray-300 text-white transition-transform duration-300 hover:rotate-90" />
               </div>
-              <div className="flex items-center cursor-pointer p-2 lg:justify-center"
-              onClick={() => {
-                contactRef.current?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }}>
-                <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white"
-                >
+
+              {/* Contact Us - Hidden on smaller screens */}
+              <div
+                className="flex items-center cursor-pointer p-2 hidden lg:flex lg:justify-center"
+                onClick={() => {
+                  contactRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white">
                   Contact Us
                 </button>
                 <HiOutlineArrowCircleRight className="lg:text-xl text-xl ml-2 lg:text-gray-300 text-white transition-transform duration-300 hover:rotate-90" />
               </div>
-              <div className="flex items-center cursor-pointer p-2 lg:justify-center"
-               onClick={() => {
-                galleryRef.current?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }}>
+
+              {/* Gallery - Hidden on smaller screens */}
+              <div
+                className="flex items-center cursor-pointer p-2 hidden lg:flex lg:justify-center"
+                onClick={() => {
+                  galleryRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
                 <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white">
                   Gallery
                 </button>
@@ -335,6 +342,7 @@ const BeachHouse = () => {
               </div>
             </nav>
           </div>
+
         </div>
       </section>
 
@@ -347,7 +355,7 @@ const BeachHouse = () => {
 
         <div className="bg-gray-100 p-10 flex flex-col justify-center rounded-3xl">
           <h3 className="text-2xl md:text-3xl font-semibold text-center md:text-left">
-            Swimming Pool
+            Ideal For 
           </h3>
           <p className="text-md mb-6 mt-6 mx-2 text-center md:text-left">
             Global Giants: Uber Eats: Known for its wide range of restaurant
@@ -358,11 +366,11 @@ const BeachHouse = () => {
 
           </p>
           <button className="rounded-full lg:h-12 lg:w-full h-10 w-[150px] flex items-center justify-center bg-primary text-gray-50  mx-auto md:mx-0"
-           onClick={() => {
-            contactRef.current?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}>
+            onClick={() => {
+              contactRef.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}>
             Enquiry Now
           </button>
         </div>
@@ -386,15 +394,14 @@ const BeachHouse = () => {
 
       {/* -------------------------------------------------------- */}
       <nav>
-        <div className="flex flex-wrap justify-center items-center  py-6 text-sm sm:text-lg grid grid-cols-1 sm:grid-cols-2  md:grid-cols-[150px_150px_150px_180px_150px_150px_180px_150px] gap-2">
+        <div className="flex flex-wrap justify-center items-center lg:ml-40  py-6 text-sm sm:text-lg grid grid-cols-1 sm:grid-cols-2  md:grid-cols-[150px_150px_150px_180px_150px_150px_180px_150px] gap-6">
           {amenities.map((amenity, index) => (
             <button
               key={index}
-              className={`px-3 py-2 rounded-lg text-center ${
-                activeIndex === index
+              className={`px-3 py-2 rounded-lg text-center ${activeIndex === index
                   ? "bg-gray-700 text-white"
                   : "text-gray-600 hover:text-gray-900"
-              }`}
+                }`}
               onClick={() => handleItemClick(index)}
             >
               {amenity.name}
@@ -426,11 +433,11 @@ const BeachHouse = () => {
             {activeAmenity.description}
           </p>
           <button className="rounded-full lg:h-12 lg:w-full h-10 w-[150px] flex items-center justify-center bg-primary text-gray-50  mx-auto md:mx-0"
-           onClick={() => {
-            contactRef.current?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}>
+            onClick={() => {
+              contactRef.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}>
             Enquiry Now
           </button>
         </div>
@@ -452,15 +459,14 @@ const BeachHouse = () => {
             This Place is Perfect Enjoyments for
           </h1>
           <p className="text-base md:text-lg text-gray-600">
-            Featuring top-notch facilities and amenities, including spacious bedrooms,
-            modern kitchens, private gardens, and state-of-the-art security.
+            Every moment spent here is crafted to be unforgettable, from the tranquil sea breeze that welcomes you to the carefully curated experiences that celebrate joy and togetherness.
           </p>
           <button className="mt-6 px-8 md:px-16 lg:px-[200px] py-3 bg-primary text-white rounded-md"
-           onClick={() => {
-            contactRef.current?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}>
+            onClick={() => {
+              contactRef.current?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}>
             Enquiry Now
           </button>
         </div>
@@ -484,55 +490,55 @@ const BeachHouse = () => {
 
       <Policies />
 
-     {/* --------------------------------------------------- */}
+      {/* --------------------------------------------------- */}
 
       {/* Gallery Header */}
-     <section className="" ref={galleryRef}>
-      <div className="w-full mt-16" >
-       
-        <div className="mb-8 max-w-10xl md:mx-4 px-4 lg:px-8 text-center">
-          <h1 className="text-2xl lg:text-3xl font-semibold mb-4">Gallery</h1>
-          <p className="text-gray-600 text-base lg:text-lg">
-            Featuring top-notch facilities and amenities, including spacious
-            bedrooms, modern kitchens,
-            <br className="hidden md:block" />
-            private gardens, and state-of-the-art security.
-          </p>
+      <section className="" ref={galleryRef}>
+        <div className="w-full mt-16" >
+
+          <div className="mb-8 max-w-10xl md:mx-4 px-4 lg:px-8 text-center">
+            <h1 className="text-2xl lg:text-3xl font-semibold mb-4">Gallery</h1>
+            <p className="text-gray-600 text-base lg:text-lg">
+              Featuring top-notch facilities and amenities, including spacious
+              bedrooms, modern kitchens,
+              <br className="hidden md:block" />
+              private gardens, and state-of-the-art security.
+            </p>
+          </div>
+
+          {/* First Row */}
+          <div className="grid grid-cols-1 md:grid-cols-[400px_400px_400px_150px] gap-4  p-4 ">
+            {imagesRow1.map((image) => (
+              <div key={image.id} className="overflow-hidden group relative">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Second Row */}
+          <div className="grid grid-cols-1 md:grid-cols-[150px_400px_400px_400px] gap-4 lg:ml-[100px] ml-3">
+            {/* Button visible only on large screens */}
+            <div></div>
+
+            {/* Display images */}
+            {imagesRow2.map((image) => (
+              <div key={image.id} className="overflow-hidden group relative">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="lg:w-full w-[330px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
+                />
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* First Row */}
-        <div className="grid grid-cols-1 md:grid-cols-[400px_400px_400px_150px] gap-4  p-4 ">
-          {imagesRow1.map((image) => (
-            <div key={image.id} className="overflow-hidden group relative">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-[150px_400px_400px_400px] gap-4 lg:ml-[100px] ml-3">
-          {/* Button visible only on large screens */}
-          <div></div>
-
-          {/* Display images */}
-          {imagesRow2.map((image) => (
-            <div key={image.id} className="overflow-hidden group relative">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="lg:w-full w-[330px] h-[250px] object-cover transition-transform duration-300 group-hover:scale-105 rounded-[30px]"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* ---------------------------------------------------------- */}
+      {/* ---------------------------------------------------------- */}
       <TestimonialsCarousel />
 
       {/* --------------------------------------------------------------- */}
