@@ -115,7 +115,7 @@ import React from "react";
 
 const PerfectForSection = () => {
   return (
-    <section className="mt-14 px-4">
+    <section className="lg:mt-14 px-4">
       <div className="bg-primary py-12 lg:py-[100px] relative overflow-hidden h-auto lg:h-[376px] text-white px-6 lg:px-[100px] rounded-[30px]">
         {/* Heading with responsive font sizes */}
         <h2 className="text-2xl md:text-4xl lg:text-[45px] font-semibold mb-4 text-center lg:text-left">

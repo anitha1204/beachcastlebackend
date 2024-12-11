@@ -279,24 +279,34 @@ const BeachHouse = () => {
               <img
                 src={logo}
                 alt="Logo"
-                className="mt-8 lg:ml-6 lg:w-[138.42px] lg:h-[124.33px] w-[100px] h-[70px]"
+                className="lg:mt-8 lg:ml-6 lg:w-[138.42px] lg:h-[124.33px] w-[100px] h-[70px] mt-4"
 
               />
             </Link>
           </div>
 
+
           {/* Navigation Section */}
           <div className="absolute lg:bg-white lg:bg-opacity-100 rounded-[50px] text-black lg:top-0 top-[300px] lg:ml-[800px] lg:mt-20 ml-[130px]">
+            {/* Hidden on laptops, visible on smaller screens */}
+            <div className="flex items-center cursor-pointer justify-center lg:hidden">
+              <p className="text-center text-lg sm:text-xl lg:text-2xl font-semibold text-white mr-28">
+                Where Luxury Meets Tradition
+              </p>
+            </div>
+
             <nav
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:w-[600px] lg:h-[45px] text-end"
             >
               {/* Quick Chat - Always visible */}
-              <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center"
+              <div
+                className="flex items-center rounded-lg cursor-pointer p-2 lg:justify-center"
                 onClick={() => {
                   contactRef.current?.scrollIntoView({
                     behavior: "smooth",
                   });
-                }}>
+                }}
+              >
                 <button className="text-xl whitespace-nowrap lg:text-md lg:text-primary text-white">
                   Quick Chat
                 </button>
@@ -343,6 +353,7 @@ const BeachHouse = () => {
             </nav>
           </div>
 
+
         </div>
       </section>
 
@@ -354,15 +365,11 @@ const BeachHouse = () => {
         <div></div>
 
         <div className="bg-gray-100 p-10 flex flex-col justify-center rounded-3xl">
-          <h3 className="text-2xl md:text-3xl font-semibold text-center md:text-left">
-            Ideal For 
+          <h3 className="text-2xl md:text-2xl font-semibold text-center md:text-left">
+            Perfect For Every Celebrations
           </h3>
           <p className="text-md mb-6 mt-6 mx-2 text-center md:text-left">
-            Global Giants: Uber Eats: Known for its wide range of restaurant
-            partnerships and swift delivery times. DoorDash: Popular in the
-            United States, offering a variety of food options and delivery
-            methods. Grubhub: One of the pioneers in online food ordering, known
-            for its user-friendly interface and extensive restaurant network.
+            Wedding , Recipections , Birthdays , Anniversaries , Baby showers , Family re unions, Collage re unions , Corporate events.
 
           </p>
           <button className="rounded-full lg:h-12 lg:w-full h-10 w-[150px] flex items-center justify-center bg-primary text-gray-50  mx-auto md:mx-0"
@@ -399,8 +406,8 @@ const BeachHouse = () => {
             <button
               key={index}
               className={`px-3 py-2 rounded-lg text-center ${activeIndex === index
-                  ? "bg-gray-700 text-white"
-                  : "text-gray-600 hover:text-gray-900"
+                ? "bg-gray-700 text-white"
+                : "text-gray-600 hover:text-gray-900"
                 }`}
               onClick={() => handleItemClick(index)}
             >
@@ -609,10 +616,17 @@ const BeachHouse = () => {
                 <option value="" disabled>
                   Enquiry For
                 </option>
-                <option value="Service 1">Service 1</option>
-                <option value="Service 2">Service 2</option>
-                <option value="Service 3">Service 3</option>
+                <option value="wedding" className=" text-black">Weddings</option>
+                <option value="receptions" className=" text-black">Receptions</option>
+                <option value="birthdays" className=" text-black">Birthdays</option>
+                <option value="anniversaries" className=" text-black">Anniversaries</option>
+                <option value="babyShowers" className=" text-black">Baby Showers</option>
+                <option value="familyReunions" className=" text-black">Family Reunions</option>
+                <option value="collegeReunions" className=" text-black">College Reunions</option>
+                <option value="corporateEvents" className=" text-black">Corporate Events</option>
+                <option value="weekendGetaways" className=" text-black">Weekend Getaways</option>
               </select>
+
               {/* Submit Button */}
               <button
                 type="submit"
