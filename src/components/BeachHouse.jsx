@@ -20,13 +20,13 @@ import image3 from "../assets/Rectangle 17.png";
 import image4 from "../assets/Rectangle 18.png";
 
 
-import swimmingPoolImg from "../assets/Rectangle 74.png";
-import diningSpaceImg from "../assets/DSC07316.png";
-import parkingImg from "../assets/Service area.jpg";
-import bedroomImg from "../assets/bnr_5.jpg";
-import lawnImg from "../assets/Lawn2.jpg";
-import airConditionedImg from "../assets/Rectangle 16.png";
-import theatreImg from "../assets/Courtyard.jpg";
+import swimmingPoolImg from "../assets/stage decor.jpg";
+import diningSpaceImg from "../assets/dining.webp";
+import parkingImg from "../assets/Music.png";
+import bedroomImg from "../assets/Make up.jpg";
+import lawnImg from "../assets/retuen gift.png";
+import airConditionedImg from "../assets/mehandi.jpg";
+import theatreImg from "../assets/photography.jpg";
 
 import imgpgallery from "../assets/Lilac2.jpg";
 import imgpgallery1 from "../assets/Jade1.jpg";
@@ -47,44 +47,44 @@ const BeachHouse = () => {
 
   const amenities = [
     {
-      name: "Swimming Pool",
+      name: "Wedding Decor",
       img: swimmingPoolImg,
       description:
         "Enjoy a luxurious swimming experience in our state-of-the-art swimming pool.",
     },
     {
-      name: "Dining space",
+      name: "Catering",
       img: diningSpaceImg,
       description:
         "Our dining space is perfect for gatherings, offering a comfortable ambiance.",
     },
     {
-      name: "On Site Parking",
+      name: "Music",
       img: parkingImg,
       description:
         "Convenient on-site parking for your vehicles, ensuring safety and ease.",
     },
     {
-      name: "Luxury Bedroom",
+      name: "Make up Artist",
       img: bedroomImg,
       description:
         "Relax in our well-furnished luxury bedrooms with top-notch amenities.",
     },
     {
-      name: "Lawn Space",
+      name: "Return Gifts",
       img: lawnImg,
       description:
         "Spacious lawns for outdoor events and relaxation in a serene environment.",
     },
     {
-      name: "Air-conditioned",
+      name: "Mehandi",
       img: airConditionedImg,
       description:
         "Fully air-conditioned spaces for a comfortable and pleasant experience.",
     },
 
     {
-      name: "Private Theatre",
+      name: "Photography",
       img: theatreImg,
       description:
         "Enjoy a cinematic experience in our private theatre with premium facilities.",
