@@ -77,29 +77,3 @@ const Policies = () => {
 
 export default Policies;
 
-
-// import React from 'react';
-
-// const Policies= () => {
-//   return (
-//     <div className="flex flex-col items-center text-center px-4 py-10">
-//       {/* Title */}
-//       <h1 className="text-4xl md:text-5xl font-serif font-semibold text-gray-800">
-//         This Place is Perfect enjoyments for
-//       </h1>
-      
-//       {/* Subtitle */}
-//       <p className="mt-4 text-gray-600 text-lg md:text-xl max-w-3xl">
-//         Featuring top-notch facilities and amenities, including spacious bedrooms, modern kitchens,
-//         private gardens, and state-of-the-art security.
-//       </p>
-      
-//       {/* Button */}
-//       <button className="mt-6 bg-gray-700 hover:bg-gray-800 text-white py-3 px-8 rounded-md text-lg shadow-lg">
-//         Enquiry Now
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Policies;

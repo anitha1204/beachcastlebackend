@@ -4,10 +4,10 @@
 import React from "react";
 import { FaWifi, FaTv, FaLock, FaShieldAlt } from "react-icons/fa";
 import { TbIroningSteam } from "react-icons/tb";
-import img from '../assets/Rectangle 5.png';
-import img1 from '../assets/Lawn1.jpg';
-import img2 from '../assets/Service area.jpg';
-import img3 from '../assets/Rectangle 8.png';
+// import img from '../assets/Rectangle 5.png';
+// import img1 from '../assets/Lawn1.jpg';
+// import img2 from '../assets/Service area.jpg';
+// import img3 from '../assets/Rectangle 8.png';
 
 
 const AmenitiesFacilities = () => {
@@ -44,7 +44,7 @@ const AmenitiesFacilities = () => {
       </div>
 
       {/* Our Facilities Section */}
-      <div className="text-center">
+      {/* <div className="text-center">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-4">Our Facilities</h2>
         <p className="text-gray-300 mb-8 lg:px-28">
         Whether it's a grand wedding ceremony or an intimate gathering, our venue harmoniously merges the soothing waves of the ocean with a touch of heritage, creating a setting where modern romance meets classic traditions.
@@ -83,7 +83,7 @@ const AmenitiesFacilities = () => {
             <span>Covered Lawn</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
